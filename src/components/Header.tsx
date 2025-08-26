@@ -10,11 +10,12 @@ const Header = () => {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-primary rounded-full flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-sm">R</span>
-            </div>
-            <span className="text-xl font-bold text-foreground">Represent U</span>
+          <div className="flex items-center space-x-3">
+            <img 
+              src="/lovable-uploads/5e68b862-6fb4-46d8-8043-0e59008cdf58.png" 
+              alt="Represent U Logo" 
+              className="h-10 w-auto"
+            />
           </div>
 
           {/* Desktop Navigation */}
