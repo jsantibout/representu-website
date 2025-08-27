@@ -2,7 +2,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, Phone, MapPin, Send } from "lucide-react";
+import { Mail, Phone, MapPin, Send, Facebook, Instagram, Linkedin } from "lucide-react";
 
 const Contact = () => {
   return (
@@ -65,14 +65,14 @@ const Contact = () => {
             <div className="pt-8 border-t border-border">
               <h4 className="font-semibold text-foreground mb-4">Follow Us</h4>
               <div className="flex space-x-4">
-                <Button variant="outline" size="sm" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
-                  Facebook
+                <Button variant="outline" size="sm" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground p-2">
+                  <Facebook size={18} />
                 </Button>
-                <Button variant="outline" size="sm" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
-                  Instagram
+                <Button variant="outline" size="sm" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground p-2">
+                  <Instagram size={18} />
                 </Button>
-                <Button variant="outline" size="sm" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
-                  LinkedIn
+                <Button variant="outline" size="sm" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground p-2">
+                  <Linkedin size={18} />
                 </Button>
               </div>
             </div>
