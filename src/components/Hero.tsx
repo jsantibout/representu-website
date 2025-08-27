@@ -18,7 +18,10 @@ const Hero = () => {
               </h1>
               <p className="text-xl text-muted-foreground leading-relaxed max-w-2xl">
                 Empowering your cause and amplifying your voice. We provide businesses and nonprofits 
-                with top-tier marketing solutions at a fraction of in-house costs.
+                with top-tier marketing solutions at a fraction of in-house costs.We will alleviate stress, 
+                so you can focus on what truly matters—changing the world. We believe that with the right 
+                support, every organization can make a significant impact, and we are here to help you 
+                achieve that with creativity, passion, and strategic marketing expertise.
               </p>
             </div>
 
