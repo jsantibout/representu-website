@@ -19,7 +19,8 @@ const Header = () => {
           {/* Logo */}
           <div className="flex items-center space-x-3">
             <img 
-              src="/lovable-uploads/5e68b862-6fb4-46d8-8043-0e59008cdf58.png" 
+              // src="/lovable-uploads/5e68b862-6fb4-46d8-8043-0e59008cdf58.png" 
+              src="/RepresentULogo.png" 
               alt="Represent U Logo" 
               className="h-10 w-auto"
             />
@@ -43,7 +44,7 @@ const Header = () => {
                   <Link to="/services/strategic-planning" className="w-full">Strategic Planning & Consultations</Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
-                  <Link to="/services/events" className="w-full">Event Strategic Aid & Creation</Link>
+                  <Link to="/services/event-services" className="w-full">Event Strategic Aid & Creation</Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
                   <Link to="/services/content-creation" className="w-full">Content Creation</Link>

@@ -1,14 +1,22 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play } from "lucide-react";
-import promo from "@/assets/RepresentU_Promo_60s_v2.mp4";
 import VideoPlayer from "@/components/VideoPlayer";
+import logo from "@/assets/RepresentU_LargerLogo.png";
 
 
 const Hero = () => {
   return (
-    <section id="home" className="min-h-screen flex items-center pt-20 bg-gradient-subtle">
-      <div className="container mx-auto px-4">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+    <section id="home" className="min-h-screen flex items-center bg-gradient-subtle">
+      <div className="container px-4">
+        <h1 className="text-5xl lg:text-6xl font-extrabold leading-tight text-center flex items-center justify-center">
+          <span className="text-black mt-0">Welcome to</span>
+          <img
+            src={logo}
+            alt="RepresentU"
+            className="h-[8em]"
+          />
+        </h1>
+        <div className="grid lg:grid-cols-2 gap-12 pb-20 items-center">
           {/* Content */}
           <div className="space-y-8 animate-fade-in">
             {/* <div className="space-y-6">
@@ -72,10 +80,10 @@ const Hero = () => {
             {/* Background container with floating elements */}
             <div className="absolute inset-0 pointer-events-none">
               <div className="absolute -top-4 -right-4 w-16 h-16 bg-gradient-primary rounded-full animate-float opacity-80 z-0"></div>
-              <div className="absolute -bottom-4 -left-4 w-12 h-12 bg-primary-light rounded-full animate-float opacity-80 z-0" style={{ animationDelay: '1s' }}></div>
+              <div className="absolute -bottom-5 -left-6 w-12 h-12 bg-primary-light rounded-full animate-float opacity-80 z-0" style={{ animationDelay: '1s' }}></div>
             </div >
             <div className="relative z-10 rounded-2x1 overflow-hidden shadow-x1">
-              <VideoPlayer videoSrc={promo} autoPlay={true}/>
+              <VideoPlayer videoSrc={"https://www.youtube.com/embed/T6fJ3Q6duuc?autoplay=1&mute=1"} />
             </div>
           </div>
         </div>

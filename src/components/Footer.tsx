@@ -9,7 +9,7 @@ const Footer = () => {
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
               <img 
-                src="/lovable-uploads/5e68b862-6fb4-46d8-8043-0e59008cdf58.png" 
+                src="RepresentULogo.png" 
                 alt="Represent U Logo" 
                 className="h-12 w-12 rounded-full object-cover"
               />
