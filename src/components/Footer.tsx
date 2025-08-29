@@ -64,13 +64,13 @@ const Footer = () => {
               <p>info.representu@gmail.com</p>
               <p>951.265.1543</p>
               <div className="flex space-x-4 pt-4">
-                <a href="#" className="hover:text-white transition-colors">
+                <a href="https://www.facebook.com/profile.php?id=61565403405775" className="hover:text-white transition-colors">
                   <Facebook size={20} />
                 </a>
-                <a href="#" className="hover:text-white transition-colors">
+                <a href="https://www.instagram.com/we.rep.u/profilecard/?igsh=NTc4MTIwNjQ2YQ%3D%3D" className="hover:text-white transition-colors">
                   <Instagram size={20} />
                 </a>
-                <a href="#" className="hover:text-white transition-colors">
+                <a href="https://www.linkedin.com/company/we-represent-u/?viewAsMember=true" className="hover:text-white transition-colors">
                   <Linkedin size={20} />
                 </a>
               </div>

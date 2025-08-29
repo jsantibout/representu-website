@@ -21,8 +21,8 @@ const ContentCreationPage = () => {
                   />
                 </div>
                 <h1 className="text-4xl lg:text-5xl font-bold">
-                  <span className="text-foreground">Videography, Photography, </span>
-                  <span className="bg-gradient-primary bg-clip-text text-transparent">Podcasting & Social Media</span>
+                  <span className="text-foreground">Videography, Photography </span>
+                  <span className="bg-gradient-primary bg-clip-text text-transparent">& Podcasting </span>
                 </h1>
                 <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
                   High-quality, affordable content creation and management to amplify your 

@@ -1,6 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play } from "lucide-react";
-import heroImage from "@/assets/hero-image.jpg";
+import promo from "@/assets/RepresentU_Promo_60s_v2.mp4";
+import VideoPlayer from "@/components/VideoPlayer";
+
 
 const Hero = () => {
   return (
@@ -9,8 +11,13 @@ const Hero = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
           <div className="space-y-8 animate-fade-in">
+            {/* <div className="space-y-6">
+              <h1 className="text-5xl lg:text-6xl fond-bold leading-tight">
+                <span className="text-foreground">Welcome to </span> 
+              </h1>
+            </div> */}
             <div className="space-y-4">
-              <h1 className="text-5xl lg:text-6xl font-bold leading-tight">
+              <h1 className="text-5xl lg:text-5xl font-bold leading-tight">
                 <span className="text-foreground">Our Mission = </span>
                 <span className="bg-gradient-primary bg-clip-text text-transparent">
                   Your Purpose
@@ -44,7 +51,7 @@ const Hero = () => {
             </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-3 gap-8 pt-8 border-t border-border">
+            {/* <div className="grid grid-cols-3 gap-8 pt-8 border-t border-border">
               <div className="text-center">
                 <div className="text-3xl font-bold text-primary">200+</div>
                 <div className="text-sm text-muted-foreground">Organizations Served</div>
@@ -57,23 +64,19 @@ const Hero = () => {
                 <div className="text-3xl font-bold text-primary">$2M+</div>
                 <div className="text-sm text-muted-foreground">Grants Secured</div>
               </div>
-            </div>
+            </div> */}
           </div>
 
-          {/* Hero Image */}
+          {/* Promo Video */}
           <div className="relative lg:ml-8 animate-slide-up">
-            <div className="relative">
-              <img
-                src={heroImage}
-                alt="Represent U Marketing Solutions"
-                className="w-full h-auto rounded-2xl shadow-2xl"
-              />
-              <div className="absolute inset-0 bg-gradient-primary/10 rounded-2xl"></div>
+            {/* Background container with floating elements */}
+            <div className="absolute inset-0 pointer-events-none">
+              <div className="absolute -top-4 -right-4 w-16 h-16 bg-gradient-primary rounded-full animate-float opacity-80 z-0"></div>
+              <div className="absolute -bottom-4 -left-4 w-12 h-12 bg-primary-light rounded-full animate-float opacity-80 z-0" style={{ animationDelay: '1s' }}></div>
+            </div >
+            <div className="relative z-10 rounded-2x1 overflow-hidden shadow-x1">
+              <VideoPlayer videoSrc={promo} autoPlay={true}/>
             </div>
-            
-            {/* Floating elements */}
-            <div className="absolute -top-4 -right-4 w-16 h-16 bg-gradient-primary rounded-full animate-float"></div>
-            <div className="absolute -bottom-4 -left-4 w-12 h-12 bg-primary-light rounded-full animate-float" style={{ animationDelay: '1s' }}></div>
           </div>
         </div>
       </div>

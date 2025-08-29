@@ -64,7 +64,7 @@ const Contact = () => {
             {/* Social Links */}
             <div className="pt-8 border-t border-border">
               <h4 className="font-semibold text-foreground mb-4">Follow Us</h4>
-              <div className="flex space-x-4">
+              {/* <div className="flex space-x-4">
                 <Button variant="outline" size="sm" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground p-2">
                   <Facebook size={18} />
                 </Button>
@@ -74,6 +74,22 @@ const Contact = () => {
                 <Button variant="outline" size="sm" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground p-2">
                   <Linkedin size={18} />
                 </Button>
+              </div> */}
+              <div className="flex space-x-4">
+                {[
+                  { icon: Facebook, href: "https://www.facebook.com/profile.php?id=61565403405775", label: "Facebook" },
+                  { icon: Instagram, href: "https://www.instagram.com/we.rep.u/profilecard/?igsh=NTc4MTIwNjQ2YQ%3D%3D", label: "Instagram" },
+                  { icon: Linkedin, href: "https://www.linkedin.com/company/we-represent-u/?viewAsMember=true", label: "LinkedIn" }
+                ].map(({ icon: Icon, href, label }) => (
+                  <a
+                    key={label}
+                    href={href}
+                    className="group p-1 rounded bg-card/50 backdrop-blur-sm border border-primary/10 hover:border-primary/30 transition-all duration-300 hover:glow-effect"
+                    aria-label={label}
+                  >
+                    <Icon className="border-primary text-primary hover:bg-primary hover:text-primary-foreground p-2" size={35}/>
+                  </a>
+                ))}
               </div>
             </div>
           </div>

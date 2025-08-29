@@ -10,6 +10,7 @@ import NotFound from "./pages/NotFound";
 import StrategicPlanningPage from "./pages/services/StrategicPlanning";
 import EventServicesPage from "./pages/services/EventServices";
 import ContentCreationPage from "./pages/services/ContentCreation";
+import SocialMediaPage from "./pages/services/SocialMedia";
 import GrantServicesPage from "./pages/services/GrantServices";
 
 const queryClient = new QueryClient();
@@ -26,6 +27,7 @@ const App = () => (
           <Route path="/services/strategic-planning" element={<StrategicPlanningPage />} />
           <Route path="/services/events" element={<EventServicesPage />} />
           <Route path="/services/content-creation" element={<ContentCreationPage />} />
+          <Route path="/services/social-media" element={<SocialMediaPage />} />
           <Route path="/services/grants" element={<GrantServicesPage />} />
           <Route path="/contact" element={<ContactPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

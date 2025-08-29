@@ -20,10 +20,16 @@ const services = [
     features: ["Event planning & management", "Experience design", "Resource optimization", "Public engagement strategies"]
   },
   {
-    title: "Videography, Photography, Podcasting & Social Media",
+    title: "Videography, Photography, & Podcasting",
     description: "High-quality, affordable content creation and management to amplify your organization's voice and connect on a deeper level.",
     icon: contentIcon,
-    features: ["Professional videography", "Social media management", "Podcast production", "Photography services"]
+    features: ["Professional videography", "Podcast production", "Photography services"]
+  },
+  {
+    title: "Social Media Managment",
+    description: "Professional management to amplify your organization's voice and connect on a deeper level.",
+    icon: contentIcon,
+    features: ["Social media management"]
   },
   {
     title: "Grant Enhancement and Creation",

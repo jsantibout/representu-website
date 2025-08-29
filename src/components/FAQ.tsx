@@ -18,10 +18,10 @@ const faqs = [
     question: "What makes Represent U different than other marketing services?",
     answer: "Represent U offers marketing that will greatly impact your business locally. We are adept at getting your organization to maximize its influence within your community. In addition, typically, marketing services do not offer services like grant writing and ambassadorship. Not only are these services needed, they're a testament to the personal care that you'll receive in your partnership with Represent U."
   },
-  {
-    question: "How long does it take to see results?",
-    answer: "Results vary depending on the services and your organization's goals. Typically, our clients see initial improvements in their marketing efforts within 30-60 days. Grant writing results depend on application deadlines and review cycles, while social media and content marketing often show engagement improvements within the first month."
-  },
+  // {
+  //   question: "How long does it take to see results?",
+  //   answer: "Results vary depending on the services and your organization's goals. Typically, our clients see initial improvements in their marketing efforts within 30-60 days. Grant writing results depend on application deadlines and review cycles, while social media and content marketing often show engagement improvements within the first month."
+  // },
   {
     question: "Do you work with both businesses and nonprofits?",
     answer: "Yes! We work with both businesses and nonprofits. Our services are tailored to meet the unique needs of each type of organization, whether you're looking to increase revenue, improve donor engagement, or amplify your community impact."

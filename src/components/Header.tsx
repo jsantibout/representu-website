@@ -36,9 +36,9 @@ const Header = () => {
                 <ChevronDown className="ml-1 h-4 w-4" />
               </DropdownMenuTrigger>
               <DropdownMenuContent className="w-64">
-                <DropdownMenuItem asChild>
+                {/* <DropdownMenuItem asChild>
                   <Link to="/services" className="w-full">All Services</Link>
-                </DropdownMenuItem>
+                </DropdownMenuItem> */}
                 <DropdownMenuItem asChild>
                   <Link to="/services/strategic-planning" className="w-full">Strategic Planning & Consultations</Link>
                 </DropdownMenuItem>
@@ -46,7 +46,10 @@ const Header = () => {
                   <Link to="/services/events" className="w-full">Event Strategic Aid & Creation</Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
-                  <Link to="/services/content-creation" className="w-full">Content Creation & Social Media</Link>
+                  <Link to="/services/content-creation" className="w-full">Content Creation</Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link to="/services/social-media" className="w-full">Social Media Management</Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
                   <Link to="/services/grants" className="w-full">Grant Enhancement & Creation</Link>
@@ -83,9 +86,9 @@ const Header = () => {
                 Home
               </Link>
               <div className="space-y-2">
-                <Link to="/services" className="text-foreground hover:text-primary transition-colors block">
+                {/* <Link to="/services" className="text-foreground hover:text-primary transition-colors block">
                   All Services
-                </Link>
+                </Link> */}
                 <div className="pl-4 space-y-2 text-sm">
                   <Link to="/services/strategic-planning" className="text-muted-foreground hover:text-primary transition-colors block">
                     Strategic Planning & Consultations
@@ -94,7 +97,10 @@ const Header = () => {
                     Event Strategic Aid & Creation
                   </Link>
                   <Link to="/services/content-creation" className="text-muted-foreground hover:text-primary transition-colors block">
-                    Content Creation & Social Media
+                    Content Creation
+                  </Link>
+                  <Link to="/services/social-media-management" className="text-muted-foreground hover:text-primary transition-colors block">
+                    Social Media Management
                   </Link>
                   <Link to="/services/grants" className="text-muted-foreground hover:text-primary transition-colors block">
                     Grant Enhancement & Creation

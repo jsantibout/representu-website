@@ -3,6 +3,9 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle } from "lucide-react";
 import eventsIcon from "@/assets/events-icon.jpg";
+import VideoPlayer from "@/components/VideoPlayer";
+import testimonial1 from "@/assets/RU Jonathon Testimonial.mp4"
+import testimonial2 from "@/assets/RU Sebastian Testimonial.mp4"
 
 const EventServicesPage = () => {
   return (
@@ -62,6 +65,15 @@ const EventServicesPage = () => {
                     detail so you can focus on what matters most - connecting with your audience.
                   </p>
                 </div>
+              </div>
+
+              <div className="text-center">
+                <h2 className="text-3xl lg:text-4xl font-bold">
+                  <span className="text-foreground">Testimonials</span>
+                  <VideoPlayer videoSrc={testimonial1} autoPlay= {true}/> 
+
+                </h2>
+                
               </div>
 
               <div className="text-center bg-gradient-primary rounded-2xl p-12 text-primary-foreground">
