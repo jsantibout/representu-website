@@ -31,6 +31,9 @@ const Header = () => {
             <Link to="/" className="text-foreground hover:text-primary transition-colors">
               Home
             </Link>
+            <Link to="/about" className="text-foreground hover:text-primary transition-colors">
+              About
+            </Link>
             <DropdownMenu>
               <DropdownMenuTrigger className="flex items-center text-foreground hover:text-primary transition-colors">
                 Services
@@ -85,6 +88,9 @@ const Header = () => {
             <nav className="flex flex-col space-y-4 pt-4">
               <Link to="/" className="text-foreground hover:text-primary transition-colors">
                 Home
+              </Link>
+              <Link to="/about" className="text-foreground hover:text-primary transition-colors">
+                About
               </Link>
               <div className="space-y-2">
                 {/* <Link to="/services" className="text-foreground hover:text-primary transition-colors block">
