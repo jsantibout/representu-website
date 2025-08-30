@@ -1,19 +1,19 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play } from "lucide-react";
 import VideoPlayer from "@/components/VideoPlayer";
-import logo from "@/assets/RepresentU_LargerLogo.png";
+import logo from "@/assets/repU_LargeLogo.png";
 
 
 const Hero = () => {
   return (
     <section id="home" className="min-h-screen flex items-center bg-gradient-subtle">
       <div className="container px-4">
-        <h1 className="text-5xl lg:text-6xl font-extrabold leading-tight text-center flex items-center justify-center">
-          <span className="text-black mt-0">Welcome to</span>
+        <h1 className="text-7xl lg:text-6xl font-extrabold leading-tight text-center flex flex-col items-center justify-center pb-20">
+          <span className="text-black pt-20 mt-20">Welcome to</span>
           <img
             src={logo}
             alt="RepresentU"
-            className="h-[8em]"
+            className="h-[3em]"
           />
         </h1>
         <div className="grid lg:grid-cols-2 gap-12 pb-20 items-center">

@@ -36,7 +36,6 @@ const ContentCreationPage = () => {
                   <div className="space-y-4">
                     {[
                       "Professional videography",
-                      "Social media management",
                       "Podcast production",
                       "Photography services",
                       "Content strategy development",

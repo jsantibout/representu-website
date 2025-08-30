@@ -51,7 +51,7 @@ const EventServicesPage = () => {
                   </div>
                 </div>
 
-                <div className="space-y-6">
+                <div className="space-y-6 pb-20">
                   <h2 className="text-2xl font-bold text-foreground">Our Approach</h2>
                   <p className="text-muted-foreground leading-relaxed">
                     We don't just plan events - we create memorable experiences that align with 
@@ -66,11 +66,13 @@ const EventServicesPage = () => {
               </div>
 
               <div className="text-center">
-                <h2 className="text-3xl lg:text-4xl font-bold">
+                <h2 className="text-3xl lg:text-4xl pt-4 font-bold">
                   <span className="text-foreground">Testimonials</span>
                 </h2>
-                <div className="mt-6 pb-20 flex justify-center">
+                <div className="mt-6 pb-10 flex justify-center">
                   <VideoPlayer videoSrc={"https://www.youtube.com/embed/Y75M3K6hdno?autoplay=1"} />
+                </div>
+                <div className="pb-20">
                   <VideoPlayer videoSrc={"https://www.youtube.com/embed/FMMxxdx-uZk"} />
                 </div>
                 
