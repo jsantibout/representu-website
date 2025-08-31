@@ -23,13 +23,13 @@ const services = [
     title: "Videography, Photography, & Podcasting",
     description: "High-quality, affordable content creation and management to amplify your organization's voice and connect on a deeper level.",
     icon: contentIcon,
-    features: ["Professional videography", "Podcast production", "Photography services"]
+    features: ["Professional videography", "Podcast production", "Photography services", "Content editing & post-production", "Equipment & studio setup", "Live streaming services", "Content distribution strategy", "Brand storytelling through media"]
   },
   {
-    title: "Social Media Managment",
-    description: "Professional management to amplify your organization's voice and connect on a deeper level.",
+    title: "Social Media Management",
+    description: "Strategic social media presence management that builds authentic connections, increases engagement, and drives meaningful conversations with your audience.",
     icon: contentIcon,
-    features: ["Social media management"]
+    features: ["Content strategy & planning", "Community management", "Engagement optimization", "Analytics & reporting", "Brand voice development", "Cross-platform coordination"]
   },
   {
     title: "Grant Enhancement and Creation",

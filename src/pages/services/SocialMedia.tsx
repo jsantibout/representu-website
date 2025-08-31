@@ -25,8 +25,8 @@ const SocialMediaPage = () => {
                   <span className="bg-gradient-primary bg-clip-text text-transparent">Management </span>
                 </h1>
                 <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                  Professional social media management to amplify your 
-                  organization's voice and connect on a deeper level.
+                  Strategic social media presence management that builds authentic connections, 
+                  increases engagement, and drives meaningful conversations with your audience.
                 </p>
               </div>
 
@@ -35,12 +35,12 @@ const SocialMediaPage = () => {
                   <h2 className="text-2xl font-bold text-foreground">What We Offer</h2>
                   <div className="space-y-4">
                     {[
-                      "Professional videography",
-                      "Social media management",
-                      "Podcast production",
-                      "Photography services",
-                      "Content strategy development",
-                      "Brand storytelling"
+                      "Content strategy & planning",
+                      "Community management",
+                      "Engagement optimization",
+                      "Analytics & reporting",
+                      "Brand voice development",
+                      "Cross-platform coordination"
                     ].map((feature, idx) => (
                       <div key={idx} className="flex items-center space-x-3">
                         <CheckCircle className="h-5 w-5 text-primary" />
@@ -51,26 +51,26 @@ const SocialMediaPage = () => {
                 </div>
 
                 <div className="space-y-6">
-                  <h2 className="text-2xl font-bold text-foreground">Content That Connects</h2>
+                  <h2 className="text-2xl font-bold text-foreground">Strategic Social Media Excellence</h2>
                   <p className="text-muted-foreground leading-relaxed">
-                    In today's digital world, compelling content is essential for reaching and 
-                    engaging your audience. We create professional, authentic content that tells 
-                    your story and drives meaningful connections.
+                    In today's digital landscape, a strategic social media presence is crucial for 
+                    building authentic connections and driving meaningful engagement. We develop 
+                    comprehensive strategies that align with your organization's goals and values.
                   </p>
                   <p className="text-muted-foreground leading-relaxed">
-                    From promotional videos to podcast series, our content creation services 
-                    help you build a strong online presence that reflects your organization's 
-                    values and mission.
+                    From content planning to community management, our social media services 
+                    help you create a cohesive online presence that resonates with your audience 
+                    and amplifies your mission.
                   </p>
                 </div>
               </div>
 
               <div className="text-center bg-gradient-primary rounded-2xl p-12 text-primary-foreground">
                 <h3 className="text-3xl font-bold mb-4">
-                  Ready to Amplify Your Voice?
+                  Ready to Transform Your Social Media Presence?
                 </h3>
                 <p className="text-lg mb-8 opacity-90">
-                  Let's create content that resonates with your audience and drives engagement.
+                  Let's build authentic connections and drive meaningful engagement across all platforms.
                 </p>
                 <Button 
                   size="lg"
