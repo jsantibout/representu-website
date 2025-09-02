@@ -1,6 +1,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Share2 } from "lucide-react";
+import { Link } from "react-router-dom";
 import strategyIcon from "@/assets/strategy-icon.jpg";
 import eventsIcon from "@/assets/events-icon.jpg";
 import contentIcon from "@/assets/content-icon.jpg";
@@ -11,30 +12,35 @@ const services = [
     title: "Strategic Planning & Consultations",
     description: "Where do I start? What's my budget? How do I engage our donor/client base? We can help answer all of these questions and more.",
     icon: strategyIcon,
+    path: "/services/strategic-planning",
     features: ["Monthly strategic sessions", "Budget optimization", "Donor engagement strategies", "Leadership guidance"]
   },
   {
     title: "Event Strategic Aid and Creation",
     description: "Transform your events into EXPERIENCES that utilize resources efficiently, engage the public, and inspire your followers.",
     icon: eventsIcon,
+    path: "/services/event-services",
     features: ["Event planning & management", "Experience design", "Resource optimization", "Public engagement strategies"]
   },
   {
     title: "Videography, Photography, & Podcasting",
     description: "High-quality, affordable content creation and management to amplify your organization's voice and connect on a deeper level.",
     icon: contentIcon,
+    path: "/services/content-creation",
     features: ["Professional videography", "Podcast production", "Photography services", "Content editing & post-production", "Equipment & studio setup", "Live streaming services", "Content distribution strategy", "Brand storytelling through media"]
   },
   {
     title: "Social Media Management",
     description: "Strategic social media presence management that builds authentic connections, increases engagement, and drives meaningful conversations with your audience.",
-    icon: contentIcon,
+    icon: "social-media",
+    path: "/services/social-media",
     features: ["Content strategy & planning", "Community management", "Engagement optimization", "Analytics & reporting", "Brand voice development", "Cross-platform coordination"]
   },
   {
     title: "Grant Enhancement and Creation",
     description: "Professional grant writing that takes 80-200 hours off your plate while improving your 30-40% success rate.",
     icon: grantsIcon,
+    path: "/services/grants",
     features: ["Grant proposal writing", "Application enhancement", "Success rate optimization", "Professional formatting"]
   }
 ];
@@ -60,14 +66,18 @@ const Services = () => {
               key={index} 
               className="group hover:shadow-primary transition-all duration-300 border-0 bg-gradient-to-br from-card to-accent/20"
             >
-              <CardHeader className="space-y-4">
-                <div className="w-16 h-16 rounded-lg bg-gradient-primary p-3 group-hover:shadow-glow transition-all duration-300">
-                  <img
-                    src={service.icon}
-                    alt={service.title}
-                    className="w-full h-full object-cover rounded"
-                  />
-                </div>
+               <CardHeader className="space-y-4">
+                 <div className="w-16 h-16 rounded-lg bg-gradient-primary p-3 group-hover:shadow-glow transition-all duration-300">
+                   {service.icon === "social-media" ? (
+                     <Share2 className="w-full h-full text-primary-foreground" />
+                   ) : (
+                     <img
+                       src={service.icon}
+                       alt={service.title}
+                       className="w-full h-full object-cover rounded"
+                     />
+                   )}
+                 </div>
                 <CardTitle className="text-xl font-bold group-hover:text-primary transition-colors">
                   {service.title}
                 </CardTitle>
@@ -84,13 +94,16 @@ const Services = () => {
                     </li>
                   ))}
                 </ul>
-                <Button 
-                  variant="ghost" 
-                  className="text-primary hover:text-primary-foreground hover:bg-primary group p-0 h-auto"
-                >
-                  Learn More
-                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                </Button>
+                 <Button 
+                   variant="ghost" 
+                   className="text-primary hover:text-primary-foreground hover:bg-primary group p-0 h-auto"
+                   asChild
+                 >
+                   <Link to={service.path}>
+                     Learn More
+                     <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                   </Link>
+                 </Button>
               </CardContent>
             </Card>
           ))}
@@ -104,14 +117,17 @@ const Services = () => {
           <p className="text-lg mb-8 opacity-90">
             Let's discuss how we can help your organization achieve its goals.
           </p>
-          <Button 
-            size="lg"
-            variant="secondary"
-            className="bg-background text-primary hover:bg-background/90 shadow-lg hover:shadow-xl transition-all duration-300"
-          >
-            Schedule a Consultation
-            <ArrowRight className="ml-2 h-4 w-4" />
-          </Button>
+           <Button 
+             size="lg"
+             variant="secondary"
+             className="bg-background text-primary hover:bg-background/90 shadow-lg hover:shadow-xl transition-all duration-300"
+             asChild
+           >
+             <Link to="/contact">
+               Schedule a Consultation
+               <ArrowRight className="ml-2 h-4 w-4" />
+             </Link>
+           </Button>
         </div>
       </div>
     </section>
