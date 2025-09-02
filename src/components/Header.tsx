@@ -48,16 +48,16 @@ const Header = () => {
                   <Link to="/services/strategic-planning" className="w-full">Strategic Planning & Consultations</Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
-                  <Link to="/services/event-services" className="w-full">Event Strategic Aid & Creation</Link>
+                  <Link to="/services/event-services" className="w-full">Event Planning & Logistics</Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
-                  <Link to="/services/content-creation" className="w-full">Content Creation</Link>
+                  <Link to="/services/content-creation" className="w-full">Videography, & Photography</Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
-                  <Link to="/services/social-media" className="w-full">Social Media Management</Link>
+                  <Link to="/services/social-media" className="w-full">Social Media Management & Podcasting</Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
-                  <Link to="/services/grants" className="w-full">Grant Enhancement & Creation</Link>
+                  <Link to="/services/grants" className="w-full">Grant Consulting</Link>
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
@@ -107,16 +107,16 @@ const Header = () => {
                       Strategic Planning & Consultations
                     </Link>
                     <Link to="/services/event-services" className="text-muted-foreground hover:text-primary transition-colors block py-1">
-                      Event Strategic Aid & Creation
+                      Event Planning & Logistics
                     </Link>
                     <Link to="/services/content-creation" className="text-muted-foreground hover:text-primary transition-colors block py-1">
-                      Content Creation
+                      Videography, & Photography
                     </Link>
                     <Link to="/services/social-media" className="text-muted-foreground hover:text-primary transition-colors block py-1">
-                      Social Media Management
+                      Social Media Management & Podcasting
                     </Link>
                     <Link to="/services/grants" className="text-muted-foreground hover:text-primary transition-colors block py-1">
-                      Grant Enhancement & Creation
+                      Grant Consulting
                     </Link>
                   </div>
                 )}

@@ -6,7 +6,7 @@ import strategyIcon from "@/assets/strategy-icon.jpg";
 import eventsIcon from "@/assets/events-icon.jpg";
 import contentIcon from "@/assets/content-icon.jpg";
 import grantsIcon from "@/assets/grants-icon.jpg";
-
+import socialIcon from "@/assets/social-icon.png";
 const services = [
   {
     title: "Strategic Planning & Consultations",
@@ -16,28 +16,28 @@ const services = [
     features: ["Monthly strategic sessions", "Budget optimization", "Donor engagement strategies", "Leadership guidance"]
   },
   {
-    title: "Event Strategic Aid and Creation",
+    title: "Event Planning & Logistics",
     description: "Transform your events into EXPERIENCES that utilize resources efficiently, engage the public, and inspire your followers.",
     icon: eventsIcon,
     path: "/services/event-services",
     features: ["Event planning & management", "Experience design", "Resource optimization", "Public engagement strategies"]
   },
   {
-    title: "Videography, Photography, & Podcasting",
+    title: "Videography, & Photography  ",
     description: "High-quality, affordable content creation and management to amplify your organization's voice and connect on a deeper level.",
     icon: contentIcon,
     path: "/services/content-creation",
     features: ["Professional videography", "Podcast production", "Photography services", "Content editing & post-production", "Equipment & studio setup", "Live streaming services", "Content distribution strategy", "Brand storytelling through media"]
   },
   {
-    title: "Social Media Management",
+    title: "Social Media Management & Podcasting",
     description: "Strategic social media presence management that builds authentic connections, increases engagement, and drives meaningful conversations with your audience.",
-    icon: "social-media",
+    icon: socialIcon,
     path: "/services/social-media",
     features: ["Content strategy & planning", "Community management", "Engagement optimization", "Analytics & reporting", "Brand voice development", "Cross-platform coordination"]
   },
   {
-    title: "Grant Enhancement and Creation",
+    title: "Grant Consulting",
     description: "Professional grant writing that takes 80-200 hours off your plate while improving your 30-40% success rate.",
     icon: grantsIcon,
     path: "/services/grants",
@@ -68,15 +68,11 @@ const Services = () => {
             >
                <CardHeader className="space-y-4">
                  <div className="w-16 h-16 rounded-lg bg-gradient-primary p-3 group-hover:shadow-glow transition-all duration-300">
-                   {service.icon === "social-media" ? (
-                     <Share2 className="w-full h-full text-primary-foreground" />
-                   ) : (
-                     <img
+                  <img
                        src={service.icon}
                        alt={service.title}
                        className="w-full h-full object-cover rounded"
-                     />
-                   )}
+                   />
                  </div>
                 <CardTitle className="text-xl font-bold group-hover:text-primary transition-colors">
                   {service.title}
