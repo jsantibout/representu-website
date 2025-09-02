@@ -36,11 +36,15 @@ const Header = () => {
               About
             </Link>
             <DropdownMenu>
-              <DropdownMenuTrigger className="flex items-center text-foreground hover:text-primary transition-colors">
+              <DropdownMenuTrigger className="flex items-center text-foreground hover:text-primary transition-colors" onMouseEnter={(e) => e.currentTarget.click()}>
                 Services
                 <ChevronDown className="ml-1 h-4 w-4" />
               </DropdownMenuTrigger>
-              <DropdownMenuContent className="w-64">
+              <DropdownMenuContent className="w-64" onMouseLeave={(e) => {
+                // Close dropdown when mouse leaves
+                const trigger = e.currentTarget.previousElementSibling as HTMLElement;
+                trigger?.click();
+              }}>
                 {/* <DropdownMenuItem asChild>
                   <Link to="/services" className="w-full">All Services</Link>
                 </DropdownMenuItem> */}
@@ -68,8 +72,8 @@ const Header = () => {
 
           {/* Desktop CTA */}
           <div className="hidden md:block">
-            <Button className="bg-gradient-primary hover:shadow-primary transition-all duration-300">
-              Schedule Appointment
+            <Button className="bg-gradient-primary hover:shadow-primary transition-all duration-300" asChild>
+              <Link to="/contact">Schedule Appointment</Link>
             </Button>
           </div>
 
@@ -124,8 +128,8 @@ const Header = () => {
               <Link to="/contact" className="text-foreground hover:text-primary transition-colors">
                 Contact
               </Link>
-              <Button className="bg-gradient-primary hover:shadow-primary transition-all duration-300 w-full mt-4">
-                Schedule Appointment
+              <Button className="bg-gradient-primary hover:shadow-primary transition-all duration-300 w-full mt-4" asChild>
+                <Link to="/contact">Schedule Appointment</Link>
               </Button>
             </nav>
           </div>

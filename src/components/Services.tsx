@@ -95,7 +95,7 @@ const Services = () => {
                    className="text-primary hover:text-primary-foreground hover:bg-primary group p-0 h-auto"
                    asChild
                  >
-                   <Link to={service.path}>
+                   <Link to={service.path} onClick={() => window.scrollTo(0, 0)}>
                      Learn More
                      <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                    </Link>
