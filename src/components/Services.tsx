@@ -23,7 +23,7 @@ const services = [
     features: ["Event planning & management", "Experience design", "Resource optimization", "Public engagement strategies"]
   },
   {
-    title: "Videography, & Photography  ",
+    title: "Videography, & Photography",
     description: "High-quality, affordable content creation and management to amplify your organization's voice and connect on a deeper level.",
     icon: contentIcon,
     path: "/services/content-creation",
@@ -119,7 +119,7 @@ const Services = () => {
              className="bg-background text-primary hover:bg-background/90 shadow-lg hover:shadow-xl transition-all duration-300"
              asChild
            >
-             <Link to="/contact">
+             <Link to="/contact" onClick={() => window.scrollTo(0, 0)}>
                Schedule a Consultation
                <ArrowRight className="ml-2 h-4 w-4" />
              </Link>

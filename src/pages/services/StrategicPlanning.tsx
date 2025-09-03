@@ -1,8 +1,9 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, CheckCircle } from "lucide-react";
+import { ArrowRight, CheckCircle} from "lucide-react";
 import strategyIcon from "@/assets/strategy-icon.jpg";
+import { Link } from "react-router-dom";
 
 const StrategicPlanningPage = () => {
   return (
@@ -76,8 +77,10 @@ const StrategicPlanningPage = () => {
                   variant="secondary"
                   className="bg-background text-primary hover:bg-background/90 shadow-lg hover:shadow-xl transition-all duration-300"
                 >
-                  Schedule a Consultation
-                  <ArrowRight className="ml-2 h-4 w-4" />
+                  <Link to="/contact" onClick={() => window.scrollTo(0, 0)}>
+                    Schedule a Consultation
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
                 </Button>
               </div>
             </div>

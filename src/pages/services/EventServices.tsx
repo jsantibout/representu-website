@@ -1,8 +1,9 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, CheckCircle } from "lucide-react";
-import eventsIcon from "@/assets/events-icon.jpg";
+import { ArrowRight, CheckCircle, Link } from "lucide-react";
+// import eventsIcon from "@/assets/events-icon.jpg";
+import eventsPhoto from "@/assets/event_planning.png";
 import VideoPlayer from "@/components/VideoPlayer";
 
 const EventServicesPage = () => {
@@ -14,9 +15,10 @@ const EventServicesPage = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <div className="text-center mb-16 space-y-4 animate-fade-in">
-                <div className="w-24 h-24 rounded-lg bg-gradient-primary p-4 mx-auto mb-6">
+                <div className="w-50 h-25 rounded-lg p-4 mx-auto mb-6">
                   <img
-                    src={eventsIcon}
+                    src={eventsPhoto}
+                    // src={eventsIcon}
                     alt="Event Services"
                     className="w-full h-full object-cover rounded"
                   />
@@ -90,8 +92,10 @@ const EventServicesPage = () => {
                   variant="secondary"
                   className="bg-background text-primary hover:bg-background/90 shadow-lg hover:shadow-xl transition-all duration-300"
                 >
-                  Schedule a Consultation
-                  <ArrowRight className="ml-2 h-4 w-4" />
+                  <Link to="/contact" onClick={() => window.scrollTo(0, 0)}>
+                    Schedule a Consultation
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
                 </Button>
               </div>
             </div>

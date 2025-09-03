@@ -2,16 +2,13 @@ import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { Link } from "react-router-dom";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
+  const [hoverTimeout, setHoverTimeout] = useState<NodeJS.Timeout | null>(null);
 
   return (
     <header className="fixed top-0 w-full bg-background/80 backdrop-blur-md border-b border-border z-50">
@@ -20,7 +17,6 @@ const Header = () => {
           {/* Logo */}
           <div className="flex items-center space-x-3">
             <img 
-              // src="/lovable-uploads/5e68b862-6fb4-46d8-8043-0e59008cdf58.png" 
               src="/RepresentULogo.png" 
               alt="Represent U Logo" 
               className="h-10 w-auto"
@@ -35,37 +31,69 @@ const Header = () => {
             <Link to="/about" className="text-foreground hover:text-primary transition-colors">
               About
             </Link>
-            <DropdownMenu>
-              <DropdownMenuTrigger className="flex items-center text-foreground hover:text-primary transition-colors" onMouseEnter={(e) => e.currentTarget.click()}>
+            <div 
+              className="relative"
+              onMouseEnter={() => {
+                if (hoverTimeout) {
+                  clearTimeout(hoverTimeout);
+                  setHoverTimeout(null);
+                }
+                setIsServicesDropdownOpen(true);
+              }}
+              onMouseLeave={() => {
+                const timeout = setTimeout(() => {
+                  setIsServicesDropdownOpen(false);
+                }, 100);
+                setHoverTimeout(timeout);
+              }}
+            >
+              <button className="flex items-center text-foreground hover:text-primary transition-colors">
                 Services
                 <ChevronDown className="ml-1 h-4 w-4" />
-              </DropdownMenuTrigger>
-              <DropdownMenuContent className="w-64" onMouseLeave={(e) => {
-                // Close dropdown when mouse leaves
-                const trigger = e.currentTarget.previousElementSibling as HTMLElement;
-                trigger?.click();
-              }}>
-                {/* <DropdownMenuItem asChild>
-                  <Link to="/services" className="w-full">All Services</Link>
-                </DropdownMenuItem> */}
-                <DropdownMenuItem asChild>
-                  <Link to="/services/strategic-planning" className="w-full">Strategic Planning & Consultations</Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <Link to="/services/event-services" className="w-full">Event Planning & Logistics</Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <Link to="/services/content-creation" className="w-full">Videography, & Photography</Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <Link to="/services/social-media" className="w-full">Social Media Management & Podcasting</Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <Link to="/services/grants" className="w-full">Grant Consulting</Link>
-                </DropdownMenuItem>
-              </DropdownMenuContent>
-            </DropdownMenu>
-            <Link to="/contact" className="text-foreground hover:text-primary transition-colors">
+              </button>
+              {isServicesDropdownOpen && (
+                <div className="absolute top-full left-0 mt-2 w-64 bg-background border border-border rounded-md shadow-lg z-50">
+                  <div className="py-2">
+                    <Link 
+                      to="/services/strategic-planning" 
+                      onClick={() => window.scrollTo(0, 0)} 
+                      className="block px-4 py-2 text-sm text-foreground hover:bg-accent hover:text-accent-foreground transition-colors"
+                    >
+                      Strategic Planning & Consultations
+                    </Link>
+                    <Link 
+                      to="/services/event-services"
+                      onClick={() => window.scrollTo(0, 0)} 
+                      className="block px-4 py-2 text-sm text-foreground hover:bg-accent hover:text-accent-foreground transition-colors"
+                    >
+                      Event Planning & Logistics
+                    </Link>
+                    <Link 
+                      to="/services/content-creation" 
+                      onClick={() => window.scrollTo(0, 0)} 
+                      className="block px-4 py-2 text-sm text-foreground hover:bg-accent hover:text-accent-foreground transition-colors"
+                    >
+                      Videography, & Photography
+                    </Link>
+                    <Link 
+                      to="/services/social-media" 
+                      onClick={() => window.scrollTo(0, 0)} 
+                      className="block px-4 py-2 text-sm text-foreground hover:bg-accent hover:text-accent-foreground transition-colors"
+                    >
+                      Social Media Management & Podcasting
+                    </Link>
+                    <Link 
+                      to="/services/grants" 
+                      onClick={() => window.scrollTo(0, 0)} 
+                      className="block px-4 py-2 text-sm text-foreground hover:bg-accent hover:text-accent-foreground transition-colors"
+                    >
+                      Grant Consulting
+                    </Link>
+                  </div>
+                </div>
+              )}
+            </div>
+            <Link to="/contact" onClick={() => window.scrollTo(0, 0)} className="text-foreground hover:text-primary transition-colors">
               Contact
             </Link>
           </nav>
@@ -107,29 +135,47 @@ const Header = () => {
                 </button>
                 {isServicesOpen && (
                   <div className="pl-4 space-y-2 text-sm">
-                    <Link to="/services/strategic-planning" className="text-muted-foreground hover:text-primary transition-colors block py-1">
+                    <Link to="/services/strategic-planning" 
+                      className="text-muted-foreground hover:text-primary transition-colors block py-1"
+                      onClick={() => window.scrollTo(0, 0)} 
+                    >
                       Strategic Planning & Consultations
                     </Link>
-                    <Link to="/services/event-services" className="text-muted-foreground hover:text-primary transition-colors block py-1">
+                    <Link to="/services/event-services" 
+                      className="text-muted-foreground hover:text-primary transition-colors block py-1"
+                      onClick={() => window.scrollTo(0, 0)} 
+                    >
                       Event Planning & Logistics
                     </Link>
-                    <Link to="/services/content-creation" className="text-muted-foreground hover:text-primary transition-colors block py-1">
+                    <Link to="/services/content-creation" 
+                      className="text-muted-foreground hover:text-primary transition-colors block py-1"
+                      onClick={() => window.scrollTo(0, 0)} 
+                    >
                       Videography, & Photography
                     </Link>
-                    <Link to="/services/social-media" className="text-muted-foreground hover:text-primary transition-colors block py-1">
+                    <Link to="/services/social-media"
+                      className="text-muted-foreground hover:text-primary transition-colors block py-1"
+                      onClick={() => window.scrollTo(0, 0)} 
+                    >
                       Social Media Management & Podcasting
                     </Link>
-                    <Link to="/services/grants" className="text-muted-foreground hover:text-primary transition-colors block py-1">
+                    <Link to="/services/grants" 
+                      className="text-muted-foreground hover:text-primary transition-colors block py-1"
+                      onClick={() => window.scrollTo(0, 0)} 
+                    >
                       Grant Consulting
                     </Link>
                   </div>
                 )}
               </div>
-              <Link to="/contact" className="text-foreground hover:text-primary transition-colors">
+              <Link to="/contact" 
+                className="text-foreground hover:text-primary transition-colors"
+                onClick={() => window.scrollTo(0, 0)} 
+              >
                 Contact
               </Link>
               <Button className="bg-gradient-primary hover:shadow-primary transition-all duration-300 w-full mt-4" asChild>
-                <Link to="/contact">Schedule Appointment</Link>
+                <Link to="/contact" onClick={() => window.scrollTo(0, 0)}>Schedule Appointment</Link>
               </Button>
             </nav>
           </div>
