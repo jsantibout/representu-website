@@ -66,15 +66,15 @@ const Services = () => {
               key={index} 
               className="group hover:shadow-primary transition-all duration-300 border-0 bg-gradient-to-br from-card to-accent/20"
             >
-               <CardHeader className="space-y-4">
-                 <div className="w-16 h-16 rounded-lg bg-gradient-primary p-3 group-hover:shadow-glow transition-all duration-300">
+               <CardHeader className="space-y-4 ">
+                 <div className="w-24 h-24 rounded-lg bg-gradient-primary p-3 group-hover:shadow-glow transition-all duration-300 mx-auto">
                   <img
                        src={service.icon}
                        alt={service.title}
                        className="w-full h-full object-cover rounded"
                    />
                  </div>
-                <CardTitle className="text-xl font-bold group-hover:text-primary transition-colors">
+                <CardTitle className="text-xl font-bold text-center group-hover:text-primary transition-colors">
                   {service.title}
                 </CardTitle>
                 <CardDescription className="text-muted-foreground leading-relaxed">
@@ -119,7 +119,7 @@ const Services = () => {
              className="bg-background text-primary hover:bg-background/90 shadow-lg hover:shadow-xl transition-all duration-300"
              asChild
            >
-             <Link to="/contact" onClick={() => window.scrollTo(0, 0)}>
+             <Link to="/contact" onClick={() => window.scrollTo(0, 0)} className="flex items-center">
                Schedule a Consultation
                <ArrowRight className="ml-2 h-4 w-4" />
              </Link>

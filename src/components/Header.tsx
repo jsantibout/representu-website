@@ -100,8 +100,16 @@ const Header = () => {
 
           {/* Desktop CTA */}
           <div className="hidden md:block">
-            <Button className="bg-gradient-primary hover:shadow-primary transition-all duration-300" asChild>
-              <Link to="/contact">Schedule Appointment</Link>
+            <Button
+              className="bg-gradient-primary hover:shadow-primary transition-all duration-300"
+              asChild
+            >
+              <Link
+                to="/contact"
+                onClick={() => window.scrollTo(0, 0)}
+              >
+                Schedule Appointment
+              </Link>
             </Button>
           </div>
 

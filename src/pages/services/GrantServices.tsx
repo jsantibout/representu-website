@@ -2,7 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle} from "lucide-react";
-import grantsIcon from "@/assets/grants-icon.jpg";
+import grantPhoto from "@/assets/grant-photo.jpg";
 import { Link } from "react-router-dom";
 
 const GrantServicesPage = () => {
@@ -10,20 +10,22 @@ const GrantServicesPage = () => {
     <div className="min-h-screen">
       <Header />
       <div className="pt-20">
-        <section className="py-24 bg-gradient-to-br from-background to-accent/20">
+        {/* Full-width hero image */}
+        <div className="w-full h-[28rem] mb-8">
+          <img
+            src={grantPhoto}
+            alt="Grant Services"
+            className="w-full h-full object-cover"
+          />
+        </div>
+        
+        <section className="pb-24 bg-gradient-to-br from-background to-accent/20">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <div className="text-center mb-16 space-y-4 animate-fade-in">
-                <div className="w-24 h-24 rounded-lg bg-gradient-primary p-4 mx-auto mb-6">
-                  <img
-                    src={grantsIcon}
-                    alt="Grant Services"
-                    className="w-full h-full object-cover rounded"
-                  />
-                </div>
                 <h1 className="text-4xl lg:text-5xl font-bold">
-                  <span className="text-foreground">Grant Enhancement & </span>
-                  <span className="bg-gradient-primary bg-clip-text text-transparent">Creation</span>
+                  <span className="text-foreground">Grant </span>
+                  <span className="bg-gradient-primary bg-clip-text text-transparent">Consulting</span>
                 </h1>
                 <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
                   Professional grant writing that takes 80-200 hours off your plate while 
@@ -76,8 +78,9 @@ const GrantServicesPage = () => {
                   size="lg"
                   variant="secondary"
                   className="bg-background text-primary hover:bg-background/90 shadow-lg hover:shadow-xl transition-all duration-300"
+                  asChild
                 >
-                  <Link to="/contact" onClick={() => window.scrollTo(0, 0)}>
+                  <Link to="/contact" onClick={() => window.scrollTo(0, 0)} className="flex items-center">
                     Schedule a Consultation
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
