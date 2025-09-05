@@ -2,10 +2,10 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Share2 } from "lucide-react";
 import { Link } from "react-router-dom";
-import strategyIcon from "@/assets/strategy-icon.jpg";
-import eventsIcon from "@/assets/events-icon.jpg";
-import contentIcon from "@/assets/content-icon.jpg";
-import grantsIcon from "@/assets/grants-icon.jpg";
+import strategyIcon from "@/assets/strategy-icon.png";
+import eventsIcon from "@/assets/event-icon.png";
+import contentIcon from "@/assets/content-icon.png";
+import grantsIcon from "@/assets/grant-icon.png";
 import socialIcon from "@/assets/social-icon.png";
 const services = [
   {

@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Play } from "lucide-react";
 import VideoPlayer from "@/components/VideoPlayer";
 import logo from "@/assets/repU_LargeLogo.png";
+import { Link } from "react-router-dom";
 
 
 const Hero = () => {
@@ -19,11 +20,9 @@ const Hero = () => {
         <div className="grid lg:grid-cols-2 gap-12 pb-20 items-center">
           {/* Content */}
           <div className="space-y-8 animate-fade-in">
-            {/* <div className="space-y-6">
               <h1 className="text-5xl lg:text-6xl fond-bold leading-tight">
                 <span className="text-foreground">Welcome to </span> 
               </h1>
-            </div> */}
             <div className="space-y-4">
               <h1 className="text-5xl lg:text-5xl font-bold leading-tight">
                 <span className="text-foreground">Our Mission = </span>
@@ -42,19 +41,14 @@ const Hero = () => {
 
             <div className="flex flex-col sm:flex-row gap-4">
               <Button 
+                asChild
                 size="lg" 
                 className="bg-gradient-primary hover:shadow-glow transition-all duration-300 group"
               >
-                Get Started Today
-                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-              </Button>
-              <Button 
-                variant="outline" 
-                size="lg"
-                className="border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300"
-              >
-                <Play className="mr-2 h-4 w-4" />
-                Watch Demo
+                <Link to="/contact" onClick={() => window.scrollTo(0, 0)}>
+                  Get Started Today
+                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                </Link>
               </Button>
             </div>
 

@@ -1,4 +1,5 @@
 import { Facebook, Instagram, Linkedin } from 'lucide-react';
+import RepULogo from "@/assets/RepresentULogo.png"
 
 const Footer = () => {
   return (
@@ -9,7 +10,7 @@ const Footer = () => {
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
               <img 
-                src="RepresentULogo.png" 
+                src={RepULogo} 
                 alt="Represent U Logo" 
                 className="h-12 w-12 rounded-full object-cover"
               />
@@ -24,23 +25,23 @@ const Footer = () => {
             <h4 className="font-semibold mb-4 text-white">Quick Links</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="#home" className="text-white/80 hover:text-white transition-colors">
+                <a href="/" className="text-white/80 hover:text-white transition-colors">
                   Home
                 </a>
               </li>
               <li>
-                <a href="#about" className="text-white/80 hover:text-white transition-colors">
+                <a href="/about" className="text-white/80 hover:text-white transition-colors">
                   About
                 </a>
               </li>
               <li>
-                <a href="#services" className="text-white/80 hover:text-white transition-colors">
+                <a href="/services" className="text-white/80 hover:text-white transition-colors">
                   Services
                 </a>
               </li>
               <li>
-                <a href="#pricing" className="text-white/80 hover:text-white transition-colors">
-                  Pricing
+                <a href="/contact" className="text-white/80 hover:text-white transition-colors">
+                  Contact 
                 </a>
               </li>
             </ul>
@@ -50,10 +51,11 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold mb-4 text-white">Services</h4>
             <ul className="space-y-2 text-sm">
-              <li className="text-white/80">Strategic Planning</li>
-              <li className="text-white/80">Event Management</li>
-              <li className="text-white/80">Content Creation</li>
-              <li className="text-white/80">Grant Writing</li>
+              <li className="text-white/80">Strategic Planning & Consultations</li>
+              <li className="text-white/80">Event Planning & Logistics</li>
+              <li className="text-white/80">Videography & Photography</li>
+              <li className="text-white/80">Social Media Management & Podcasting</li>
+              <li className="text-white/80">Grant Consulting</li>
             </ul>
           </div>
 
@@ -62,7 +64,6 @@ const Footer = () => {
             <h4 className="font-semibold mb-4 text-white">Contact</h4>
             <div className="space-y-2 text-sm text-white/80">
               <p>info.representu@gmail.com</p>
-              <p>951.265.1543</p>
               <div className="flex space-x-4 pt-4">
                 <a href="https://www.facebook.com/profile.php?id=61565403405775" className="hover:text-white transition-colors">
                   <Facebook size={20} />
@@ -80,7 +81,7 @@ const Footer = () => {
 
         <div className="border-t border-white/20 mt-8 pt-8 text-center">
           <p className="text-white/60 text-sm">
-            © 2024 Represent U. All rights reserved. Empowering organizations to change the world.
+            © 2025 Represent U. All rights reserved. Empowering organizations to change the world.
           </p>
         </div>
       </div>

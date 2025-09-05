@@ -20,7 +20,7 @@ const EventServicesPage = () => {
           />
         </div>
         
-        <section className="py-24 bg-gradient-to-br from-background to-accent/20">
+        <section className="pb-24 bg-gradient-to-br from-background to-accent/20">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <div className="text-center mb-16 space-y-4 animate-fade-in">

@@ -2,9 +2,92 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, Phone, MapPin, Send, Facebook, Instagram, Linkedin } from "lucide-react";
+import { Checkbox } from "@/components/ui/checkbox";
+import { Mail, Phone, MapPin, Send, Facebook, Instagram, Linkedin, Loader2 } from "lucide-react";
+import { useState } from "react";
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    organization: '',
+    message: '',
+    services: [] as string[]
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+
+  const services = [
+    "Strategic Planning & Consulting",
+    "Videography",
+    "Photography",
+    "Social Media Management",
+    "Grant Writing & Editing",
+    "Event Creation",
+    "Assistance with Existing Events",
+    "Podcasting",
+    "Other"
+  ];
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleServiceChange = (service: string, checked: boolean) => {
+    setFormData(prev => ({
+      ...prev,
+      services: checked 
+        ? [...prev.services, service]
+        : prev.services.filter(s => s !== service)
+    }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
+
+    try {
+      // EmailJS configuration - you'll need to replace these with your actual values
+      const serviceId = 'service_ynypwot'; // Replace with your EmailJS service ID
+      const templateId = 'template_5hzf1dt'; // Replace with your EmailJS template ID
+      const publicKey = 'KCNBJMK5GxluTEgdf'; // Replace with your EmailJS public key
+
+      const templateParams = {
+        from_name: `${formData.firstName} ${formData.lastName}`,
+        from_email: formData.email,
+        organization: formData.organization,
+        message: formData.message,
+        services: formData.services.join(', '),
+        to_email: 'info.representu@gmail.com'
+        // to_email: 'jsantibout.pjr@gmail.com'
+      };
+
+      await emailjs.send(serviceId, templateId, templateParams, publicKey);
+      
+      setSubmitStatus('success');
+      setFormData({
+        firstName: '',
+        lastName: '',
+        email: '',
+        organization: '',
+        message: '',
+        services: []
+      });
+    } catch (error) {
+      console.error('Error sending email:', error);
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <section id="contact" className="py-24 bg-gradient-subtle">
       <div className="container mx-auto px-4">
@@ -37,16 +120,6 @@ const Contact = () => {
                 <div>
                   <h4 className="font-semibold text-foreground">Email</h4>
                   <p className="text-muted-foreground">info.representu@gmail.com</p>
-                </div>
-              </div>
-
-              <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center">
-                  <Phone className="w-5 h-5 text-primary-foreground" />
-                </div>
-                <div>
-                  <h4 className="font-semibold text-foreground">Phone</h4>
-                  <p className="text-muted-foreground">951.265.1543</p>
                 </div>
               </div>
 
@@ -92,42 +165,122 @@ const Contact = () => {
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-2">
                   <label className="text-sm font-medium text-foreground">First Name</label>
-                  <Input placeholder="Your first name" className="border-border focus:border-primary" />
+                  <Input 
+                    name="firstName"
+                    value={formData.firstName}
+                    onChange={handleInputChange}
+                    placeholder="Your first name" 
+                    className="border-border focus:border-primary" 
+                    required
+                  />
                 </div>
                 <div className="space-y-2">
                   <label className="text-sm font-medium text-foreground">Last Name</label>
-                  <Input placeholder="Your last name" className="border-border focus:border-primary" />
+                  <Input 
+                    name="lastName"
+                    value={formData.lastName}
+                    onChange={handleInputChange}
+                    placeholder="Your last name" 
+                    className="border-border focus:border-primary" 
+                    required
+                  />
                 </div>
               </div>
 
               <div className="space-y-2">
                 <label className="text-sm font-medium text-foreground">Email</label>
-                <Input type="email" placeholder="your@email.com" className="border-border focus:border-primary" />
+                <Input 
+                  type="email" 
+                  name="email"
+                  value={formData.email}
+                  onChange={handleInputChange}
+                  placeholder="your@email.com" 
+                  className="border-border focus:border-primary" 
+                  required
+                />
               </div>
 
               <div className="space-y-2">
                 <label className="text-sm font-medium text-foreground">Organization</label>
-                <Input placeholder="Your organization name" className="border-border focus:border-primary" />
+                <Input 
+                  name="organization"
+                  value={formData.organization}
+                  onChange={handleInputChange}
+                  placeholder="Your organization name" 
+                  className="border-border focus:border-primary" 
+                  required
+                />
+              </div>
+
+              <div className="space-y-3">
+                <label className="text-sm font-medium text-foreground">Services of Interest</label>
+                <div className="grid grid-cols-1 gap-3">
+                  {services.map((service) => (
+                    <div key={service} className="flex items-center space-x-2">
+                      <Checkbox 
+                        id={service.toLowerCase().replace(/\s+/g, '-')}
+                        checked={formData.services.includes(service)}
+                        onCheckedChange={(checked) => handleServiceChange(service, checked as boolean)}
+                      />
+                      <label 
+                        htmlFor={service.toLowerCase().replace(/\s+/g, '-')}
+                        className="text-sm text-foreground cursor-pointer"
+                      >
+                        {service}
+                      </label>
+                    </div>
+                  ))}
+                </div>
               </div>
 
               <div className="space-y-2">
                 <label className="text-sm font-medium text-foreground">Message</label>
                 <Textarea 
+                  name="message"
+                  value={formData.message}
+                  onChange={handleInputChange}
                   placeholder="Tell us about your organization and what services you're interested in..."
                   className="border-border focus:border-primary min-h-[120px]"
+                  required
                 />
               </div>
 
+              {/* Status Messages */}
+              {submitStatus === 'success' && (
+                <div className="p-4 bg-green-50 border border-green-200 rounded-lg">
+                  <p className="text-green-800 text-sm">Message sent successfully! We'll get back to you soon.</p>
+                </div>
+              )}
+              
+              {submitStatus === 'error' && (
+                <div className="p-4 bg-red-50 border border-red-200 rounded-lg">
+                  <p className="text-red-800 text-sm">Failed to send message. Please try again or contact us directly.</p>
+                </div>
+              )}
+
               <Button 
-                className="w-full bg-gradient-primary hover:shadow-glow transition-all duration-300 group"
+                type="submit"
+                disabled={isSubmitting}
+                className="w-full bg-gradient-primary hover:shadow-glow transition-all duration-300 group disabled:opacity-50"
                 size="lg"
               >
-                Send Message
-                <Send className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                {isSubmitting ? (
+                  <>
+                    <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                    Sending...
+                  </>
+                ) : (
+                  <>
+                    Send Message
+                    <Send className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  </>
+                )}
               </Button>
+              </form>
             </CardContent>
           </Card>
         </div>
