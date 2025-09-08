@@ -47,10 +47,10 @@ const services = [
 
 const Services = () => {
   return (
-    <section id="services" className="py-24 bg-background">
+    <section id="services" className="py-24 bg-background" role="region" aria-labelledby="services-heading">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16 space-y-4 animate-fade-in">
-          <h2 className="text-4xl lg:text-5xl font-bold">
+        <header className="text-center mb-16 space-y-4 animate-fade-in">
+          <h2 id="services-heading" className="text-4xl lg:text-5xl font-bold">
             <span className="text-foreground">Our </span>
             <span className="bg-gradient-primary bg-clip-text text-transparent">Services</span>
           </h2>
@@ -58,19 +58,20 @@ const Services = () => {
             Comprehensive marketing solutions designed to amplify your impact and 
             help your organization reach its full potential.
           </p>
-        </div>
+        </header>
 
-        <div className="grid md:grid-cols-2 gap-8 mb-16">
+        <div className="grid md:grid-cols-2 gap-8 mb-16" role="list">
           {services.map((service, index) => (
             <Card 
               key={index} 
-              className="group hover:shadow-primary transition-all duration-300 border-0 bg-gradient-to-br from-card to-accent/20"
+              className="group hover:shadow-primary transition-all duration-300 border-0 bg-gradient-to-br from-card to-accent/20 focus-within:ring-2 focus-within:ring-primary focus-within:ring-offset-2"
+              role="listitem"
             >
                <CardHeader className="space-y-4 ">
                  <div className="w-24 h-24 rounded-lg bg-gradient-primary p-3 group-hover:shadow-glow transition-all duration-300 mx-auto">
                   <img
                        src={service.icon}
-                       alt={service.title}
+                       alt={`${service.title} service icon`}
                        className="w-full h-full object-cover rounded"
                    />
                  </div>
@@ -82,22 +83,22 @@ const Services = () => {
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
-                <ul className="space-y-2">
+                <ul className="space-y-2" role="list">
                   {service.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center text-sm text-muted-foreground">
-                      <div className="w-1.5 h-1.5 bg-primary rounded-full mr-3"></div>
+                      <div className="w-1.5 h-1.5 bg-primary rounded-full mr-3 flex-shrink-0" aria-hidden="true"></div>
                       {feature}
                     </li>
                   ))}
                 </ul>
                  <Button 
                    variant="ghost" 
-                   className="text-primary hover:text-primary-foreground hover:bg-primary group p-0 h-auto"
+                   className="text-primary hover:text-primary-foreground hover:bg-primary group p-0 h-auto focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
                    asChild
                  >
                    <Link to={service.path} onClick={() => window.scrollTo(0, 0)}>
                      Learn More
-                     <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                     <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
                    </Link>
                  </Button>
               </CardContent>
@@ -106,8 +107,8 @@ const Services = () => {
         </div>
 
         {/* CTA Section */}
-        <div className="text-center bg-gradient-primary rounded-2xl p-12 text-primary-foreground">
-          <h3 className="text-3xl font-bold mb-4">
+        <div className="text-center bg-gradient-primary rounded-2xl p-12 text-primary-foreground" role="region" aria-labelledby="cta-heading">
+          <h3 id="cta-heading" className="text-3xl font-bold mb-4">
             Ready to Amplify Your Impact?
           </h3>
           <p className="text-lg mb-8 opacity-90">
@@ -116,12 +117,12 @@ const Services = () => {
            <Button 
              size="lg"
              variant="secondary"
-             className="bg-background text-primary hover:bg-background/90 shadow-lg hover:shadow-xl transition-all duration-300"
+             className="bg-background text-primary hover:bg-background/90 shadow-lg hover:shadow-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
              asChild
            >
              <Link to="/contact" onClick={() => window.scrollTo(0, 0)} className="flex items-center">
                Schedule a Consultation
-               <ArrowRight className="ml-2 h-4 w-4" />
+               <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
              </Link>
            </Button>
         </div>

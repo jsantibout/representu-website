@@ -1,11 +1,13 @@
 const About = () => {
   return (
-        <section id="about" className="py-20 bg-gradient-to-b from-background to-background/50">
+        <section id="about" className="py-20 bg-gradient-to-b from-background to-background/50" role="region" aria-labelledby="about-heading">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <h1 className="text-4xl md:text-5xl font-bold text-center mb-8">
-                About <span className="text-primary">Represent U</span>
-              </h1>
+              <header className="text-center mb-8">
+                <h1 id="about-heading" className="text-4xl md:text-5xl font-bold">
+                  About <span className="text-primary">Represent U</span>
+                </h1>
+              </header>
               
               <div className="prose prose-lg max-w-none">
                 <div className="text-center mb-12">
@@ -31,21 +33,21 @@ const About = () => {
                   </div>
                   <div className="bg-card p-8 rounded-lg border">
                     <h3 className="text-2xl font-semibold mb-4">Our Values</h3>
-                    <ul className="space-y-3">
-                      <li className="flex items-start">
-                        <span className="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                    <ul className="space-y-3" role="list">
+                      <li className="flex items-start" role="listitem">
+                        <span className="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0" aria-hidden="true"></span>
                         <span className="text-muted-foreground">Strategic thinking and innovation</span>
                       </li>
-                      <li className="flex items-start">
-                        <span className="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                      <li className="flex items-start" role="listitem">
+                        <span className="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0" aria-hidden="true"></span>
                         <span className="text-muted-foreground">Collaborative partnerships</span>
                       </li>
-                      <li className="flex items-start">
-                        <span className="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                      <li className="flex items-start" role="listitem">
+                        <span className="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0" aria-hidden="true"></span>
                         <span className="text-muted-foreground">Results-driven solutions</span>
                       </li>
-                      <li className="flex items-start">
-                        <span className="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                      <li className="flex items-start" role="listitem">
+                        <span className="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0" aria-hidden="true"></span>
                         <span className="text-muted-foreground">Community impact focus</span>
                       </li>
                     </ul>
@@ -92,7 +94,7 @@ const About = () => {
                   </p>
                   <a
                     href="/contact"
-                    className="inline-flex items-center justify-center px-8 py-3 bg-primary text-primary-foreground hover:bg-primary/90 rounded-md font-medium transition-colors"
+                    className="inline-flex items-center justify-center px-8 py-3 bg-primary text-primary-foreground hover:bg-primary/90 rounded-md font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
                   >
                     Contact Us Today
                   </a>

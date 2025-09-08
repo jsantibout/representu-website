@@ -7,29 +7,28 @@ import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
-    <section id="home" className="min-h-screen flex items-center bg-gradient-subtle">
+    <section id="home" className="min-h-screen flex items-center bg-gradient-subtle" role="banner">
       <div className="container px-4">
-        <h1 className="text-7xl lg:text-6xl font-extrabold leading-tight text-center flex flex-col items-center justify-center pb-20">
-          <span className="text-black pt-20 mt-20">Welcome to</span>
-          <img
-            src={logo}
-            alt="RepresentU"
-            className="h-[3em]"
-          />
-        </h1>
+        <header className="text-center pb-20">
+          <h1 className="text-7xl lg:text-6xl font-extrabold leading-tight flex flex-col items-center justify-center">
+            <span className="text-black pt-20 mt-20">Welcome to</span>
+            <img
+              src={logo}
+              alt="RepresentU - Empowering your cause and amplifying your voice"
+              className="h-[3em]"
+            />
+          </h1>
+        </header>
         <div className="grid lg:grid-cols-2 gap-12 pb-20 items-center">
           {/* Content */}
           <div className="space-y-8 animate-fade-in">
-              <h1 className="text-5xl lg:text-6xl fond-bold leading-tight">
-                <span className="text-foreground">Welcome to </span> 
-              </h1>
             <div className="space-y-4">
-              <h1 className="text-5xl lg:text-5xl font-bold leading-tight">
+              <h2 className="text-5xl lg:text-5xl font-bold leading-tight">
                 <span className="text-foreground">Our Mission = </span>
                 <span className="bg-gradient-primary bg-clip-text text-transparent">
                   Your Purpose
                 </span>
-              </h1>
+              </h2>
               <p className="text-xl text-muted-foreground leading-relaxed max-w-2xl">
                 Empowering your cause and amplifying your voice. We provide businesses and nonprofits 
                 with top-tier marketing solutions at a fraction of in-house costs. We will alleviate stress, 
@@ -43,11 +42,11 @@ const Hero = () => {
               <Button 
                 asChild
                 size="lg" 
-                className="bg-gradient-primary hover:shadow-glow transition-all duration-300 group"
+                className="bg-gradient-primary hover:shadow-glow transition-all duration-300 group focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
               >
                 <Link to="/contact" onClick={() => window.scrollTo(0, 0)}>
                   Get Started Today
-                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
                 </Link>
               </Button>
             </div>
@@ -72,7 +71,7 @@ const Hero = () => {
           {/* Promo Video */}
           <div className="relative lg:ml-8 animate-slide-up">
             {/* Background container with floating elements */}
-            <div className="absolute inset-0 pointer-events-none">
+            <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
               <div className="absolute -top-4 -right-4 w-16 h-16 bg-gradient-primary rounded-full animate-float opacity-80 z-0"></div>
               <div className="absolute -bottom-5 -left-6 w-12 h-12 bg-primary-light rounded-full animate-float opacity-80 z-0" style={{ animationDelay: '1s' }}></div>
             </div >

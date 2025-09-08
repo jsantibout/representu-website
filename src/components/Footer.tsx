@@ -3,7 +3,7 @@ import RepULogo from "@/assets/RepresentULogo.png"
 
 const Footer = () => {
   return (
-    <footer className="bg-black text-white py-12">
+    <footer className="bg-black text-white py-12" role="contentinfo">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-4 gap-8">
           {/* Logo & Description */}
@@ -23,34 +23,36 @@ const Footer = () => {
           {/* Quick Links */}
           <div>
             <h4 className="font-semibold mb-4 text-white">Quick Links</h4>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <a href="/" className="text-white/80 hover:text-white transition-colors">
-                  Home
-                </a>
-              </li>
-              <li>
-                <a href="/about" className="text-white/80 hover:text-white transition-colors">
-                  About
-                </a>
-              </li>
-              <li>
-                <a href="/services" className="text-white/80 hover:text-white transition-colors">
-                  Services
-                </a>
-              </li>
-              <li>
-                <a href="/contact" className="text-white/80 hover:text-white transition-colors">
-                  Contact 
-                </a>
-              </li>
-            </ul>
+            <nav aria-label="Footer navigation">
+              <ul className="space-y-2 text-sm" role="list">
+                <li>
+                  <a href="/" className="text-white/80 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-black rounded">
+                    Home
+                  </a>
+                </li>
+                <li>
+                  <a href="/about" className="text-white/80 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-black rounded">
+                    About
+                  </a>
+                </li>
+                <li>
+                  <a href="/services" className="text-white/80 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-black rounded">
+                    Services
+                  </a>
+                </li>
+                <li>
+                  <a href="/contact" className="text-white/80 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-black rounded">
+                    Contact 
+                  </a>
+                </li>
+              </ul>
+            </nav>
           </div>
 
           {/* Services */}
           <div>
             <h4 className="font-semibold mb-4 text-white">Services</h4>
-            <ul className="space-y-2 text-sm">
+            <ul className="space-y-2 text-sm" role="list">
               <li className="text-white/80">Strategic Planning & Consultations</li>
               <li className="text-white/80">Event Planning & Logistics</li>
               <li className="text-white/80">Videography & Photography</li>
@@ -63,16 +65,41 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold mb-4 text-white">Contact</h4>
             <div className="space-y-2 text-sm text-white/80">
-              <p>info.representu@gmail.com</p>
-              <div className="flex space-x-4 pt-4">
-                <a href="https://www.facebook.com/profile.php?id=61565403405775" className="hover:text-white transition-colors">
-                  <Facebook size={20} />
+              <p>
+                <a href="mailto:info.representu@gmail.com" className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-black rounded">
+                  info.representu@gmail.com
                 </a>
-                <a href="https://www.instagram.com/we.rep.u/profilecard/?igsh=NTc4MTIwNjQ2YQ%3D%3D" className="hover:text-white transition-colors">
-                  <Instagram size={20} />
+              </p>
+              <div className="flex space-x-4 pt-4" role="list">
+                <a 
+                  href="https://www.facebook.com/profile.php?id=61565403405775" 
+                  className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-black rounded"
+                  aria-label="Follow us on Facebook"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  role="listitem"
+                >
+                  <Facebook size={20} aria-hidden="true" />
                 </a>
-                <a href="https://www.linkedin.com/company/we-represent-u/?viewAsMember=true" className="hover:text-white transition-colors">
-                  <Linkedin size={20} />
+                <a 
+                  href="https://www.instagram.com/we.rep.u/profilecard/?igsh=NTc4MTIwNjQ2YQ%3D%3D" 
+                  className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-black rounded"
+                  aria-label="Follow us on Instagram"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  role="listitem"
+                >
+                  <Instagram size={20} aria-hidden="true" />
+                </a>
+                <a 
+                  href="https://www.linkedin.com/company/we-represent-u/?viewAsMember=true" 
+                  className="hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-black rounded"
+                  aria-label="Follow us on LinkedIn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  role="listitem"
+                >
+                  <Linkedin size={20} aria-hidden="true" />
                 </a>
               </div>
             </div>

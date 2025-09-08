@@ -9,12 +9,12 @@ const StrategicPlanningPage = () => {
   return (
     <div className="min-h-screen">
       <Header />
-      <div className="pt-20">
+      <main className="pt-20">
         {/* Full-width hero image */}
         <div className="w-full h-[28rem] mb-8">
           <img
             src={strategyPhoto}
-            alt="Strategic Planning"
+            alt="Strategic planning meeting with team members discussing organizational goals and strategies"
             className="w-full h-full object-cover"
           />
         </div>
@@ -36,7 +36,7 @@ const StrategicPlanningPage = () => {
               <div className="grid md:grid-cols-2 gap-12 mb-16">
                 <div className="space-y-6">
                   <h2 className="text-2xl font-bold text-foreground">What We Offer</h2>
-                  <div className="space-y-4">
+                  <ul className="space-y-4" role="list">
                     {[
                       "Monthly strategic sessions",
                       "Budget optimization",
@@ -45,12 +45,12 @@ const StrategicPlanningPage = () => {
                       "Goal setting and tracking",
                       "Resource allocation planning"
                     ].map((feature, idx) => (
-                      <div key={idx} className="flex items-center space-x-3">
-                        <CheckCircle className="h-5 w-5 text-primary" />
+                      <li key={idx} className="flex items-center space-x-3" role="listitem">
+                        <CheckCircle className="h-5 w-5 text-primary" aria-hidden="true" />
                         <span className="text-muted-foreground">{feature}</span>
-                      </div>
+                      </li>
                     ))}
-                  </div>
+                  </ul>
                 </div>
 
                 <div className="space-y-6">
@@ -77,19 +77,19 @@ const StrategicPlanningPage = () => {
                 <Button 
                   size="lg"
                   variant="secondary"
-                  className="bg-background text-primary hover:bg-background/90 shadow-lg hover:shadow-xl transition-all duration-300"
+                  className="bg-background text-primary hover:bg-background/90 shadow-lg hover:shadow-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
                   asChild
                 >
                   <Link to="/contact" onClick={() => window.scrollTo(0, 0)} className="flex items-center">
                     Schedule a Consultation
-                    <ArrowRight className="ml-2 h-4 w-4" />
+                    <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
                   </Link>
                 </Button>
               </div>
             </div>
           </div>
         </section>
-      </div>
+      </main>
       <Footer />
     </div>
   );

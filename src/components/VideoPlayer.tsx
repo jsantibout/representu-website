@@ -22,12 +22,13 @@ export default function VideoPlayer({videoSrc}) {
                 width="650"
                 height="370"
                 src={videoSrc}
-                title="YouTube video player"
+                title="RepresentU promotional video - Learn about our mission to empower organizations"
                 className="rounded-2xl shadow-2xl relative z-10"
                 style={{ maxWidth: '100%', maxHeight: '400px' }}
-                // frameBorder="0"
+                frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
+                loading="lazy"
             ></iframe>
         </div>
     )
