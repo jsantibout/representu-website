@@ -58,8 +58,8 @@ const About = () => {
                   <h2 className="text-3xl font-bold mb-6 text-center">What Sets Us Apart</h2>
                   <div className="grid md:grid-cols-3 gap-8">
                     <div className="text-center">
-                      <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <span className="text-2xl font-bold text-primary">💡</span>
+                      <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4" aria-hidden="true">
+                        <span className="text-2xl font-bold text-primary" aria-hidden="true">💡</span>
                       </div>
                       <h3 className="text-xl font-semibold mb-3">Innovation</h3>
                       <p className="text-muted-foreground">
@@ -67,8 +67,8 @@ const About = () => {
                       </p>
                     </div>
                     <div className="text-center">
-                      <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <span className="text-2xl font-bold text-primary">🤝</span>
+                      <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4" aria-hidden="true">
+                        <span className="text-2xl font-bold text-primary" aria-hidden="true">🤝</span>
                       </div>
                       <h3 className="text-xl font-semibold mb-3">Partnership</h3>
                       <p className="text-muted-foreground">
@@ -76,8 +76,8 @@ const About = () => {
                       </p>
                     </div>
                     <div className="text-center">
-                      <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <span className="text-2xl font-bold text-primary">📈</span>
+                      <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4" aria-hidden="true">
+                        <span className="text-2xl font-bold text-primary" aria-hidden="true">📈</span>
                       </div>
                       <h3 className="text-xl font-semibold mb-3">Results</h3>
                       <p className="text-muted-foreground">

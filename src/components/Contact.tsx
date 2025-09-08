@@ -18,6 +18,7 @@ const Contact = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [errors, setErrors] = useState<{[key: string]: string}>({});
 
   const services = [
     "Strategic Planning & Consulting",
@@ -37,6 +38,13 @@ const Contact = () => {
       ...prev,
       [name]: value
     }));
+    // Clear error when user starts typing
+    if (errors[name]) {
+      setErrors(prev => ({
+        ...prev,
+        [name]: ''
+      }));
+    }
   };
 
   const handleServiceChange = (service: string, checked: boolean) => {
@@ -48,10 +56,43 @@ const Contact = () => {
     }));
   };
 
+  const validateForm = () => {
+    const newErrors: {[key: string]: string} = {};
+    
+    if (!formData.firstName.trim()) {
+      newErrors.firstName = 'First name is required';
+    }
+    if (!formData.lastName.trim()) {
+      newErrors.lastName = 'Last name is required';
+    }
+    if (!formData.email.trim()) {
+      newErrors.email = 'Email is required';
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      newErrors.email = 'Please enter a valid email address';
+    }
+    if (!formData.organization.trim()) {
+      newErrors.organization = 'Organization is required';
+    }
+    if (!formData.message.trim()) {
+      newErrors.message = 'Message is required';
+    } else if (formData.message.trim().length < 10) {
+      newErrors.message = 'Message must be at least 10 characters long';
+    }
+    
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    if (!validateForm()) {
+      return;
+    }
+    
     setIsSubmitting(true);
     setSubmitStatus('idle');
+    setErrors({});
 
     try {
       // EmailJS configuration - you'll need to replace these with your actual values
@@ -115,7 +156,7 @@ const Contact = () => {
             <div className="space-y-6" role="list">
               <div className="flex items-center space-x-4" role="listitem">
                 <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center" aria-hidden="true">
-                  <Mail className="w-5 h-5 text-primary-foreground" />
+                  <Mail className="w-5 h-5 text-primary-foreground" aria-hidden="true" />
                 </div>
                 <div>
                   <h4 className="font-semibold text-foreground">Email</h4>
@@ -129,7 +170,7 @@ const Contact = () => {
 
               <div className="flex items-center space-x-4" role="listitem">
                 <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center" aria-hidden="true">
-                  <MapPin className="w-5 h-5 text-primary-foreground" />
+                  <MapPin className="w-5 h-5 text-primary-foreground" aria-hidden="true" />
                 </div>
                 <div>
                   <h4 className="font-semibold text-foreground">Service Area</h4>
@@ -182,11 +223,17 @@ const Contact = () => {
                     value={formData.firstName}
                     onChange={handleInputChange}
                     placeholder="Your first name" 
-                    className="border-border focus:border-primary focus:ring-2 focus:ring-primary focus:ring-offset-2" 
+                    className={`border-border focus:border-primary focus:ring-2 focus:ring-primary focus:ring-offset-2 ${errors.firstName ? 'border-red-500' : ''}`}
                     required
                     aria-required="true"
-                    aria-describedby="firstName-error"
+                    aria-describedby={errors.firstName ? "firstName-error" : undefined}
+                    aria-invalid={!!errors.firstName}
                   />
+                  {errors.firstName && (
+                    <p id="firstName-error" className="text-sm text-red-600" role="alert">
+                      {errors.firstName}
+                    </p>
+                  )}
                 </div>
                 <div className="space-y-2">
                   <label htmlFor="lastName" className="text-sm font-medium text-foreground">Last Name *</label>
@@ -196,11 +243,17 @@ const Contact = () => {
                     value={formData.lastName}
                     onChange={handleInputChange}
                     placeholder="Your last name" 
-                    className="border-border focus:border-primary focus:ring-2 focus:ring-primary focus:ring-offset-2" 
+                    className={`border-border focus:border-primary focus:ring-2 focus:ring-primary focus:ring-offset-2 ${errors.lastName ? 'border-red-500' : ''}`}
                     required
                     aria-required="true"
-                    aria-describedby="lastName-error"
+                    aria-describedby={errors.lastName ? "lastName-error" : undefined}
+                    aria-invalid={!!errors.lastName}
                   />
+                  {errors.lastName && (
+                    <p id="lastName-error" className="text-sm text-red-600" role="alert">
+                      {errors.lastName}
+                    </p>
+                  )}
                 </div>
               </div>
 
@@ -213,11 +266,17 @@ const Contact = () => {
                   value={formData.email}
                   onChange={handleInputChange}
                   placeholder="your@email.com" 
-                  className="border-border focus:border-primary focus:ring-2 focus:ring-primary focus:ring-offset-2" 
+                  className={`border-border focus:border-primary focus:ring-2 focus:ring-primary focus:ring-offset-2 ${errors.email ? 'border-red-500' : ''}`}
                   required
                   aria-required="true"
-                  aria-describedby="email-error"
+                  aria-describedby={errors.email ? "email-error" : undefined}
+                  aria-invalid={!!errors.email}
                 />
+                {errors.email && (
+                  <p id="email-error" className="text-sm text-red-600" role="alert">
+                    {errors.email}
+                  </p>
+                )}
               </div>
 
               <div className="space-y-2">
@@ -228,11 +287,17 @@ const Contact = () => {
                   value={formData.organization}
                   onChange={handleInputChange}
                   placeholder="Your organization name" 
-                  className="border-border focus:border-primary focus:ring-2 focus:ring-primary focus:ring-offset-2" 
+                  className={`border-border focus:border-primary focus:ring-2 focus:ring-primary focus:ring-offset-2 ${errors.organization ? 'border-red-500' : ''}`}
                   required
                   aria-required="true"
-                  aria-describedby="organization-error"
+                  aria-describedby={errors.organization ? "organization-error" : undefined}
+                  aria-invalid={!!errors.organization}
                 />
+                {errors.organization && (
+                  <p id="organization-error" className="text-sm text-red-600" role="alert">
+                    {errors.organization}
+                  </p>
+                )}
               </div>
 
               <fieldset className="space-y-3">
@@ -265,11 +330,17 @@ const Contact = () => {
                   value={formData.message}
                   onChange={handleInputChange}
                   placeholder="Tell us about your organization and what services you're interested in..."
-                  className="border-border focus:border-primary focus:ring-2 focus:ring-primary focus:ring-offset-2 min-h-[120px]"
+                  className={`border-border focus:border-primary focus:ring-2 focus:ring-primary focus:ring-offset-2 min-h-[120px] ${errors.message ? 'border-red-500' : ''}`}
                   required
                   aria-required="true"
-                  aria-describedby="message-error"
+                  aria-describedby={errors.message ? "message-error" : undefined}
+                  aria-invalid={!!errors.message}
                 />
+                {errors.message && (
+                  <p id="message-error" className="text-sm text-red-600" role="alert">
+                    {errors.message}
+                  </p>
+                )}
               </div>
 
               {/* Status Messages */}

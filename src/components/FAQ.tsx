@@ -30,17 +30,17 @@ const faqs = [
 
 const FAQ = () => {
   return (
-    <section className="py-24 bg-background">
+    <section id="faq" className="py-24 bg-background" role="region" aria-labelledby="faq-heading">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16 space-y-4 animate-fade-in">
-          <h2 className="text-4xl lg:text-5xl font-bold">
+        <header className="text-center mb-16 space-y-4 animate-fade-in">
+          <h2 id="faq-heading" className="text-4xl lg:text-5xl font-bold">
             <span className="text-foreground">Frequently Asked </span>
             <span className="bg-gradient-primary bg-clip-text text-transparent">Questions</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Get answers to common questions about our services and how we can help your organization.
           </p>
-        </div>
+        </header>
 
         <div className="max-w-4xl mx-auto">
           <Accordion type="single" collapsible className="space-y-4">
