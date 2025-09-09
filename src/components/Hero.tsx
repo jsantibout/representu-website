@@ -10,12 +10,12 @@ const Hero = () => {
     <section id="home" className="min-h-screen flex items-center bg-gradient-subtle" role="banner">
       <div className="container px-4">
         <header className="text-center pb-20">
-          <h1 className="text-7xl lg:text-6xl font-extrabold leading-tight flex flex-col items-center justify-center">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl font-extrabold leading-tight flex flex-col items-center justify-center">
             <span className="text-black pt-20 mt-20">Welcome to</span>
             <img
               src={logo}
               alt="RepresentU - Empowering your cause and amplifying your voice"
-              className="h-[3em]"
+              className="h-[2.5em] sm:h-[3em] md:h-[3.5em] lg:h-[3em] max-w-full"
             />
           </h1>
         </header>
