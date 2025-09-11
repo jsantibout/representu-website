@@ -10,38 +10,38 @@ import socialIcon from "@/assets/social-icon.png";
 const services = [
   {
     title: "Strategic Planning & Consultations",
-    description: "Where do I start? What's my budget? How do I engage our donor/client base? We can help answer all of these questions and more.",
+    description: "Where do I start? What resources should I utilize? How do I attract new clients/donors? How do I engage my current client/donor base?",
     icon: strategyIcon,
     path: "/services/strategic-planning",
-    features: ["Monthly strategic sessions", "Budget optimization", "Donor engagement strategies", "Leadership guidance"]
+    features: ["Monthly Strategic Sessions", "Resource Optimization", "Acquisition and Engagement Strategies", "Building Branding & Storytelling"]
   },
   {
     title: "Event Planning & Logistics",
-    description: "Transform your events into EXPERIENCES that utilize resources efficiently, engage the public, and inspire your followers.",
+    description: "Transform your events into EXPERIENCES that engage the public, inspire your followers, and effectively utilize resources.",
     icon: eventsIcon,
     path: "/services/event-services",
-    features: ["Event planning & management", "Experience design", "Resource optimization", "Public engagement strategies"]
+    features: ["Event Planning & Logistical Guidance", "On-site Coordinating", "Building New & Maximizing Current Partnership Strategizing", "Employee or Volunteer Coordinating"]
   },
   {
     title: "Videography, & Photography",
-    description: "High-quality, affordable content creation and management to amplify your organization's voice and connect on a deeper level.",
+    description: "High-quality, affordable content creation utilized to amplify your cause and tell your story.",
     icon: contentIcon,
     path: "/services/content-creation",
-    features: ["Professional videography", "Podcast production", "Photography services", "Content editing & post-production", "Equipment & studio setup", "Live streaming services", "Content distribution strategy", "Brand storytelling through media"]
+    features: ["Professional Videography", "Professional Photography", "State of the Art Audio, Lighting, & Editing", "Content Strategy, Brand Storytelling, & Event Production"]
   },
   {
     title: "Social Media Management & Podcasting",
-    description: "Strategic social media presence management that builds authentic connections, increases engagement, and drives meaningful conversations with your audience.",
+    description: "Seamless, common-sense social media management that builds authentic connections, increases engagement, and inspires meaningful dialogue with your current and future supporters.",
     icon: socialIcon,
     path: "/services/social-media",
-    features: ["Content strategy & planning", "Community management", "Engagement optimization", "Analytics & reporting", "Brand voice development", "Cross-platform coordination"]
+    features: ["Increased Brand Visibility, Awareness, & Engagement", "Cross-Platform Postings and Management", "Consistent Strategic Content Creation", "Data-Driven Growth & Analytics"]
   },
   {
     title: "Grant Consulting",
-    description: "Professional grant writing that takes 80-200 hours off your plate while improving your 30-40% success rate.",
+    description: "Professional grant writing and consultations that can save your organization multiple hours of labor and simultaneously decrease overall costs.",
     icon: grantsIcon,
     path: "/services/grants",
-    features: ["Grant proposal writing", "Application enhancement", "Success rate optimization", "Professional formatting"]
+    features: ["Provide Access & Insight into Funding Opportunities", "Editing and Authoring Compelling & Competitive Proposals", "Maximizing Time & Savings on Resources", "Improving Success & Providing Consistent Long-Term Strategies"]
   }
 ];
 

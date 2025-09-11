@@ -38,12 +38,11 @@ const StrategicPlanningPage = () => {
                   <h2 className="text-2xl font-bold text-foreground">What We Offer</h2>
                   <ul className="space-y-4" role="list">
                     {[
-                      "Monthly strategic sessions",
-                      "Budget optimization",
-                      "Donor engagement strategies", 
-                      "Leadership guidance",
-                      "Goal setting and tracking",
-                      "Resource allocation planning"
+                      "Consistent Strategic Meetings",
+                      "Client/Donor Acquisition & Management Resources",
+                      "Goal Setting",
+                      "Leadership Guidance",
+                      "Budget & Resource Optimization"
                     ].map((feature, idx) => (
                       <li key={idx} className="flex items-center space-x-3" role="listitem">
                         <CheckCircle className="h-5 w-5 text-primary" aria-hidden="true" />

@@ -28,8 +28,7 @@ const GrantServicesPage = () => {
                   <span className="bg-gradient-primary bg-clip-text text-transparent">Consulting</span>
                 </h1>
                 <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                  Professional grant writing that takes 80-200 hours off your plate while 
-                  improving your 30-40% success rate.
+                  Professional grant writing and consultations designed to maximize your resources and increase your success rate.
                 </p>
               </div>
 
@@ -38,12 +37,11 @@ const GrantServicesPage = () => {
                   <h2 className="text-2xl font-bold text-foreground">What We Offer</h2>
                   <div className="space-y-4">
                     {[
-                      "Grant proposal writing",
-                      "Application enhancement",
-                      "Success rate optimization",
-                      "Professional formatting",
-                      "Research and compliance",
-                      "Follow-up management"
+                      "Grant Proposal Writing",
+                      "Coaching Grant Writers",
+                      "Editing Grant Proposals",
+                      "Locating New Opportunities for Funding",
+                      "Consistently Engaging Donors & Funding Programs"
                     ].map((feature, idx) => (
                       <div key={idx} className="flex items-center space-x-3">
                         <CheckCircle className="h-5 w-5 text-primary" />
@@ -61,8 +59,7 @@ const GrantServicesPage = () => {
                     in the most compelling way possible.
                   </p>
                   <p className="text-muted-foreground leading-relaxed">
-                    We've helped organizations secure millions in funding by crafting proposals 
-                    that clearly articulate impact, demonstrate need, and showcase measurable outcomes.
+                    We've helped organizations increase their funding by collaborating together on properly crafted, articulate, and powerful grants. Our goal is to help build your impact, communicate your cause's needs, and illuminate your purpose through consistent grant writing.
                   </p>
                 </div>
               </div>

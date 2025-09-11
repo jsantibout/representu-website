@@ -38,12 +38,11 @@ const SocialMediaPage = () => {
                   <h2 className="text-2xl font-bold text-foreground">What We Offer</h2>
                   <div className="space-y-4">
                     {[
-                      "Content strategy & planning",
-                      "Community management",
-                      "Engagement optimization",
-                      "Analytics & reporting",
-                      "Brand voice development",
-                      "Cross-platform coordination"
+                      "Content Strategy & Planning",
+                      "Content Creation, Graphic Design, & Post Interactions",
+                      "Growing Engagement",
+                      "Cross-Platform Coordination",
+                      "Analytics"
                     ].map((feature, idx) => (
                       <div key={idx} className="flex items-center space-x-3">
                         <CheckCircle className="h-5 w-5 text-primary" />

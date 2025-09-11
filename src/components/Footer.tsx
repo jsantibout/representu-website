@@ -1,4 +1,5 @@
 import { Facebook, Instagram, Linkedin } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import RepULogo from "@/assets/RepresentULogo.png"
 
 const Footer = () => {
@@ -52,13 +53,55 @@ const Footer = () => {
           {/* Services */}
           <div>
             <h4 className="font-semibold mb-4 text-white">Services</h4>
-            <ul className="space-y-2 text-sm" role="list">
-              <li className="text-white/80">Strategic Planning & Consultations</li>
-              <li className="text-white/80">Event Planning & Logistics</li>
-              <li className="text-white/80">Videography & Photography</li>
-              <li className="text-white/80">Social Media Management & Podcasting</li>
-              <li className="text-white/80">Grant Consulting</li>
-            </ul>
+            <nav aria-label="Services navigation">
+              <ul className="space-y-2 text-sm" role="list">
+                <li>
+                  <Link 
+                    to="/services/strategic-planning" 
+                    className="text-white/80 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-black rounded"
+                    onClick={() => window.scrollTo(0, 0)}
+                  >
+                    Strategic Planning & Consultations
+                  </Link>
+                </li>
+                <li>
+                  <Link 
+                    to="/services/event-services" 
+                    className="text-white/80 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-black rounded"
+                    onClick={() => window.scrollTo(0, 0)}
+                  >
+                    Event Planning & Logistics
+                  </Link>
+                </li>
+                <li>
+                  <Link 
+                    to="/services/content-creation" 
+                    className="text-white/80 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-black rounded"
+                    onClick={() => window.scrollTo(0, 0)}
+                  >
+                    Videography & Photography
+                  </Link>
+                </li>
+                <li>
+                  <Link 
+                    to="/services/social-media" 
+                    className="text-white/80 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-black rounded"
+                    onClick={() => window.scrollTo(0, 0)}
+                  >
+                    Social Media Management & Podcasting
+                  </Link>
+                </li>
+                <li>
+                  <Link 
+                    to="/services/grants" 
+                    className="text-white/80 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-black rounded"
+                    onClick={() => window.scrollTo(0, 0)}
+                  >
+                    Grant Consulting
+                  </Link>
+                </li>
+              </ul>
+            </nav>
           </div>
 
           {/* Contact */}

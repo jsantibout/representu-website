@@ -29,8 +29,7 @@ const ContentCreationPage = () => {
                   <span className="bg-gradient-primary bg-clip-text text-transparent">& Podcasting </span>
                 </h1>
                 <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                  High-quality, affordable content creation and management to amplify your 
-                  organization's voice and connect on a deeper level.
+                  From promotional videos and professional headshots to podcast series,...
                 </p>
               </div>
 
@@ -39,11 +38,12 @@ const ContentCreationPage = () => {
                   <h2 className="text-2xl font-bold text-foreground">What We Offer</h2>
                   <div className="space-y-4">
                     {[
-                      "Professional videography",
-                      "Podcast production",
-                      "Photography services",
-                      "Content strategy development",
-                      "Brand storytelling"
+                      "Professional Videography",
+                      "Professional Photography",
+                      "Content Editing",
+                      "Compelling Storytelling",
+                      "Effective Brand Representation",
+                      "Elite Podcasting"
                     ].map((feature, idx) => (
                       <div key={idx} className="flex items-center space-x-3">
                         <CheckCircle className="h-5 w-5 text-primary" />

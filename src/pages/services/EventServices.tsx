@@ -39,12 +39,11 @@ const EventServicesPage = () => {
                   <h2 className="text-2xl font-bold text-foreground">What We Offer</h2>
                   <div className="space-y-4">
                     {[
-                      "Event planning & management",
-                      "Experience design",
-                      "Resource optimization",
-                      "Public engagement strategies",
-                      "Vendor coordination",
-                      "Post-event analysis"
+                      "Event Planning",
+                      "Event Logistics",
+                      "Vendor & Volunteer Coordination",
+                      "Resource Optimization",
+                      "Public Engagement Collaboration & Strategies"
                     ].map((feature, idx) => (
                       <div key={idx} className="flex items-center space-x-3">
                         <CheckCircle className="h-5 w-5 text-primary" />

@@ -36,19 +36,19 @@ const About = () => {
                     <ul className="space-y-3" role="list">
                       <li className="flex items-start" role="listitem">
                         <span className="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0" aria-hidden="true"></span>
-                        <span className="text-muted-foreground">Strategic thinking and innovation</span>
+                        <span className="text-muted-foreground">Authenticity & Integrity</span>
                       </li>
                       <li className="flex items-start" role="listitem">
                         <span className="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0" aria-hidden="true"></span>
-                        <span className="text-muted-foreground">Collaborative partnerships</span>
+                        <span className="text-muted-foreground">Collaboration & Community</span>
                       </li>
                       <li className="flex items-start" role="listitem">
                         <span className="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0" aria-hidden="true"></span>
-                        <span className="text-muted-foreground">Results-driven solutions</span>
+                        <span className="text-muted-foreground">Stewardship</span>
                       </li>
                       <li className="flex items-start" role="listitem">
                         <span className="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0" aria-hidden="true"></span>
-                        <span className="text-muted-foreground">Community impact focus</span>
+                        <span className="text-muted-foreground">Bibically Based Service</span>
                       </li>
                     </ul>
                   </div>
@@ -61,27 +61,27 @@ const About = () => {
                       <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4" aria-hidden="true">
                         <span className="text-2xl font-bold text-primary" aria-hidden="true">💡</span>
                       </div>
-                      <h3 className="text-xl font-semibold mb-3">Innovation</h3>
+                      <h3 className="text-xl font-semibold mb-3">Conviction</h3>
                       <p className="text-muted-foreground">
-                        We bring fresh perspectives and creative solutions to every challenge.
+                        We don't market solely to increase visibility - we REPRESENT your organization's beliefs, core values, and convictions
                       </p>
                     </div>
                     <div className="text-center">
                       <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4" aria-hidden="true">
                         <span className="text-2xl font-bold text-primary" aria-hidden="true">🤝</span>
                       </div>
-                      <h3 className="text-xl font-semibold mb-3">Partnership</h3>
+                      <h3 className="text-xl font-semibold mb-3">Cost-Effective</h3>
                       <p className="text-muted-foreground">
-                        We work alongside you as true partners in your success.
+                        Our services provide the expertise of a full marketing team at a fraction of the cost of hiring staff - a critical advantage for small businesses and nonprofits. 
                       </p>
                     </div>
                     <div className="text-center">
                       <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4" aria-hidden="true">
                         <span className="text-2xl font-bold text-primary" aria-hidden="true">📈</span>
                       </div>
-                      <h3 className="text-xl font-semibold mb-3">Results</h3>
+                      <h3 className="text-xl font-semibold mb-3">Community</h3>
                       <p className="text-muted-foreground">
-                        Our strategies are designed to deliver measurable outcomes.
+                        We help build and foster relationships, networks, and local influence that amplify client reach and credibility.
                       </p>
                     </div>
                   </div>
