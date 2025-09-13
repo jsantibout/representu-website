@@ -11,17 +11,13 @@ const faqs = [
     answer: "Yes, we will customize any and all of our services to best fit U. Head over to the contact tab. You can schedule an appointment with us to discuss what you need from there. We look forward to serving you!"
   },
   {
-    question: "Do you offer website construction, SEO services, or Google business management?",
+    question: "Do you offer SEO services, or Google business management?",
     answer: "At this time, we do not offer any of these services; however, we have some incredible partners that do. If you head over to the Contact Us tab, you can schedule a call or message us with an email. We are more than happy to connect you with one of our incredible partners."
   },
   {
     question: "What makes Represent U different than other marketing services?",
     answer: "Represent U offers marketing that will greatly impact your business locally. We are adept at getting your organization to maximize its influence within your community. In addition, typically, marketing services do not offer services like grant writing and ambassadorship. Not only are these services needed, they're a testament to the personal care that you'll receive in your partnership with Represent U."
   },
-  // {
-  //   question: "How long does it take to see results?",
-  //   answer: "Results vary depending on the services and your organization's goals. Typically, our clients see initial improvements in their marketing efforts within 30-60 days. Grant writing results depend on application deadlines and review cycles, while social media and content marketing often show engagement improvements within the first month."
-  // },
   {
     question: "Do you work with both businesses and nonprofits?",
     answer: "Yes! We work with both businesses and nonprofits. Our services are tailored to meet the unique needs of each type of organization, whether you're looking to increase revenue, improve donor engagement, or amplify your community impact."

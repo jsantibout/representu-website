@@ -2,7 +2,6 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle} from "lucide-react";
-// import contentIcon from "@/assets/content-icon.jpg";
 import contentPhoto from "@/assets/services_4.webp";
 import { Link } from "react-router-dom";
 
@@ -25,11 +24,12 @@ const ContentCreationPage = () => {
             <div className="max-w-4xl mx-auto">
               <div className="text-center mb-16 space-y-4 animate-fade-in">
                 <h1 className="text-4xl lg:text-5xl font-bold">
-                  <span className="text-foreground">Videography, Photography </span>
-                  <span className="bg-gradient-primary bg-clip-text text-transparent">& Podcasting </span>
+                  <span className="text-foreground">Videography & </span>
+                  <span className="bg-gradient-primary bg-clip-text text-transparent">Photography</span>
                 </h1>
                 <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                  From promotional videos and professional headshots to podcast series,...
+                  From promotional videos and professional headshots to podcast series. High-quality, affordable content creation and management to amplify your 
+                  organization's voice and connect on a deeper level.
                 </p>
               </div>
 

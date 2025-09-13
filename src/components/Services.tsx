@@ -7,6 +7,7 @@ import eventsIcon from "@/assets/event-icon.png";
 import contentIcon from "@/assets/content-icon.png";
 import grantsIcon from "@/assets/grant-icon.png";
 import socialIcon from "@/assets/social-icon.png";
+import websiteIcon from "@/assets/website-icon.png";
 const services = [
   {
     title: "Strategic Planning & Consultations",
@@ -42,6 +43,13 @@ const services = [
     icon: grantsIcon,
     path: "/services/grants",
     features: ["Provide Access & Insight into Funding Opportunities", "Editing and Authoring Compelling & Competitive Proposals", "Maximizing Time & Savings on Resources", "Improving Success & Providing Consistent Long-Term Strategies"]
+  },
+  {
+    title: "Website Design & Development",
+    description: "Professional, responsive websites that showcase your organization's mission and drive engagement with modern design and optimal performance.",
+    icon: websiteIcon,
+    path: "/services/website-design",
+    features: ["Custom Website Design", "Responsive Development", "Performance Optimization", "Ongoing Maintenance & Support"]
   }
 ];
 

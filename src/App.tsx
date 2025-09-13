@@ -13,6 +13,7 @@ import EventServicesPage from "./pages/services/EventServices";
 import ContentCreationPage from "./pages/services/ContentCreation";
 import SocialMediaPage from "./pages/services/SocialMedia";
 import GrantServicesPage from "./pages/services/GrantServices";
+import WebsiteDesignPage from "./pages/services/WebsiteDesign";
 
 const queryClient = new QueryClient();
 
@@ -38,6 +39,7 @@ const App = () => (
           <Route path="/services/content-creation" element={<ContentCreationPage />} />
           <Route path="/services/social-media" element={<SocialMediaPage />} />
           <Route path="/services/grants" element={<GrantServicesPage />} />
+          <Route path="/services/website-design" element={<WebsiteDesignPage />} />
           <Route path="/contact" element={<ContactPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />

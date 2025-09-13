@@ -45,11 +45,18 @@ const Header = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center space-x-3">
-            <img 
-              src="/RepresentULogo.png" 
-              alt="Represent U Logo" 
-              className="h-10 w-auto"
-            />
+            <Link 
+              to="/" 
+              onClick={() => window.scrollTo(0, 0)}
+              className="focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded transition-opacity hover:opacity-80"
+              aria-label="Go to home page"
+            >
+              <img 
+                src="/RepresentULogo.png" 
+                alt="Represent U Logo" 
+                className="h-10 w-auto"
+              />
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
