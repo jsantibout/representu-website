@@ -2,5 +2,7 @@
   "/page": "app/page.js",
   "/services/strategic-planning/page": "app/services/strategic-planning/page.js",
   "/contact/page": "app/contact/page.js",
-  "/services/event-services/page": "app/services/event-services/page.js"
+  "/services/event-services/page": "app/services/event-services/page.js",
+  "/about/page": "app/about/page.js",
+  "/services/website-design/page": "app/services/website-design/page.js"
 }
