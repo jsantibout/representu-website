@@ -1,4 +1,8 @@
-export default function VideoPlayer({videoSrc}) {
+interface VideoPlayerProps {
+  videoSrc: string;
+}
+
+export default function VideoPlayer({videoSrc}: VideoPlayerProps) {
     return (
         <div className="relative inline-block">
             {/* <video

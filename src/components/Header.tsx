@@ -1,7 +1,9 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import { useState, useRef, useEffect } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
 
 const Header = () => {
@@ -46,7 +48,7 @@ const Header = () => {
           {/* Logo */}
           <div className="flex items-center space-x-3">
             <Link 
-              to="/" 
+              href="/" 
               onClick={() => window.scrollTo(0, 0)}
               className="focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded transition-opacity hover:opacity-80"
               aria-label="Go to home page"
@@ -61,10 +63,10 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8" role="navigation" aria-label="Main navigation">
-            <Link to="/" className="text-foreground hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded">
+            <Link href="/" className="text-foreground hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded">
               Home
             </Link>
-            <Link to="/about" className="text-foreground hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded">
+            <Link href="/about" className="text-foreground hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded">
               About
             </Link>
             <div 
@@ -110,7 +112,7 @@ const Header = () => {
                 >
                   <div className="py-2" role="none">
                     <Link 
-                      to="/services/strategic-planning" 
+                      href="/services/strategic-planning" 
                       onClick={() => window.scrollTo(0, 0)} 
                       className="block px-4 py-2 text-sm text-foreground hover:bg-accent hover:text-accent-foreground transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-inset"
                       role="menuitem"
@@ -118,7 +120,7 @@ const Header = () => {
                       Strategic Planning & Consultations
                     </Link>
                     <Link 
-                      to="/services/event-services"
+                      href="/services/event-services"
                       onClick={() => window.scrollTo(0, 0)} 
                       className="block px-4 py-2 text-sm text-foreground hover:bg-accent hover:text-accent-foreground transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-inset"
                       role="menuitem"
@@ -126,7 +128,7 @@ const Header = () => {
                       Event Planning & Logistics
                     </Link>
                     <Link 
-                      to="/services/content-creation" 
+                      href="/services/content-creation" 
                       onClick={() => window.scrollTo(0, 0)} 
                       className="block px-4 py-2 text-sm text-foreground hover:bg-accent hover:text-accent-foreground transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-inset"
                       role="menuitem"
@@ -134,7 +136,7 @@ const Header = () => {
                       Videography, & Photography
                     </Link>
                     <Link 
-                      to="/services/social-media" 
+                      href="/services/social-media" 
                       onClick={() => window.scrollTo(0, 0)} 
                       className="block px-4 py-2 text-sm text-foreground hover:bg-accent hover:text-accent-foreground transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-inset"
                       role="menuitem"
@@ -142,7 +144,7 @@ const Header = () => {
                       Social Media Management & Podcasting
                     </Link>
                     <Link 
-                      to="/services/grants" 
+                      href="/services/grants" 
                       onClick={() => window.scrollTo(0, 0)} 
                       className="block px-4 py-2 text-sm text-foreground hover:bg-accent hover:text-accent-foreground transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-inset"
                       role="menuitem"
@@ -153,7 +155,7 @@ const Header = () => {
                 </div>
               )}
             </div>
-            <Link to="/contact" onClick={() => window.scrollTo(0, 0)} className="text-foreground hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded">
+            <Link href="/contact" onClick={() => window.scrollTo(0, 0)} className="text-foreground hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded">
               Contact
             </Link>
           </nav>
@@ -165,7 +167,7 @@ const Header = () => {
               asChild
             >
               <Link
-                to="/contact"
+                href="/contact"
                 onClick={() => window.scrollTo(0, 0)}
               >
                 Schedule Appointment
@@ -189,10 +191,10 @@ const Header = () => {
         {isMenuOpen && (
           <div id="mobile-menu" className="md:hidden mt-4 pb-4 border-t border-border">
             <nav className="flex flex-col space-y-4 pt-4" role="navigation" aria-label="Mobile navigation">
-              <Link to="/" className="text-foreground hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded" onClick={() => setIsMenuOpen(false)}>
+              <Link href="/" className="text-foreground hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded" onClick={() => setIsMenuOpen(false)}>
                 Home
               </Link>
-              <Link to="/about" className="text-foreground hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded" onClick={() => setIsMenuOpen(false)}>
+              <Link href="/about" className="text-foreground hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded" onClick={() => setIsMenuOpen(false)}>
                 About
               </Link>
               <div className="space-y-2">
@@ -208,35 +210,35 @@ const Header = () => {
                 </button>
                 {isServicesOpen && (
                   <div id="mobile-services-menu" className="pl-4 space-y-2 text-sm" role="menu" aria-labelledby="mobile-services-button">
-                    <Link to="/services/strategic-planning" 
+                    <Link href="/services/strategic-planning" 
                       className="text-muted-foreground hover:text-primary transition-colors block py-1 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
                       onClick={() => { window.scrollTo(0, 0); setIsMenuOpen(false); }} 
                       role="menuitem"
                     >
                       Strategic Planning & Consultations
                     </Link>
-                    <Link to="/services/event-services" 
+                    <Link href="/services/event-services" 
                       className="text-muted-foreground hover:text-primary transition-colors block py-1 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
                       onClick={() => { window.scrollTo(0, 0); setIsMenuOpen(false); }} 
                       role="menuitem"
                     >
                       Event Planning & Logistics
                     </Link>
-                    <Link to="/services/content-creation" 
+                    <Link href="/services/content-creation" 
                       className="text-muted-foreground hover:text-primary transition-colors block py-1 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
                       onClick={() => { window.scrollTo(0, 0); setIsMenuOpen(false); }} 
                       role="menuitem"
                     >
                       Videography, & Photography
                     </Link>
-                    <Link to="/services/social-media"
+                    <Link href="/services/social-media"
                       className="text-muted-foreground hover:text-primary transition-colors block py-1 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
                       onClick={() => { window.scrollTo(0, 0); setIsMenuOpen(false); }} 
                       role="menuitem"
                     >
                       Social Media Management & Podcasting
                     </Link>
-                    <Link to="/services/grants" 
+                    <Link href="/services/grants" 
                       className="text-muted-foreground hover:text-primary transition-colors block py-1 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
                       onClick={() => { window.scrollTo(0, 0); setIsMenuOpen(false); }} 
                       role="menuitem"
@@ -246,14 +248,14 @@ const Header = () => {
                   </div>
                 )}
               </div>
-              <Link to="/contact" 
+              <Link href="/contact" 
                 className="text-foreground hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
                 onClick={() => { window.scrollTo(0, 0); setIsMenuOpen(false); }} 
               >
                 Contact
               </Link>
               <Button className="bg-gradient-primary hover:shadow-primary transition-all duration-300 w-full mt-4 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2" asChild>
-                <Link to="/contact" onClick={() => { window.scrollTo(0, 0); setIsMenuOpen(false); }}>Schedule Appointment</Link>
+                <Link href="/contact" onClick={() => { window.scrollTo(0, 0); setIsMenuOpen(false); }}>Schedule Appointment</Link>
               </Button>
             </nav>
           </div>

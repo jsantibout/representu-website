@@ -1,5 +1,6 @@
 import { Facebook, Instagram, Linkedin } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
+import Image from 'next/image';
 import RepULogo from "@/assets/RepresentULogo.png"
 
 const Footer = () => {
@@ -10,10 +11,12 @@ const Footer = () => {
           {/* Logo & Description */}
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
-              <img 
+              <Image 
                 src={RepULogo} 
                 alt="Represent U Logo" 
                 className="h-12 w-12 rounded-full object-cover"
+                width={48}
+                height={48}
               />
             </div>
             <p className="text-white/80 text-sm leading-relaxed">
@@ -57,7 +60,7 @@ const Footer = () => {
               <ul className="space-y-2 text-sm" role="list">
                 <li>
                   <Link 
-                    to="/services/strategic-planning" 
+                    href="/services/strategic-planning" 
                     className="text-white/80 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-black rounded"
                     onClick={() => window.scrollTo(0, 0)}
                   >
@@ -66,7 +69,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <Link 
-                    to="/services/event-services" 
+                    href="/services/event-services" 
                     className="text-white/80 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-black rounded"
                     onClick={() => window.scrollTo(0, 0)}
                   >
@@ -75,7 +78,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <Link 
-                    to="/services/content-creation" 
+                    href="/services/content-creation" 
                     className="text-white/80 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-black rounded"
                     onClick={() => window.scrollTo(0, 0)}
                   >
@@ -84,7 +87,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <Link 
-                    to="/services/social-media" 
+                    href="/services/social-media" 
                     className="text-white/80 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-black rounded"
                     onClick={() => window.scrollTo(0, 0)}
                   >
@@ -93,7 +96,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <Link 
-                    to="/services/grants" 
+                    href="/services/grants" 
                     className="text-white/80 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-black rounded"
                     onClick={() => window.scrollTo(0, 0)}
                   >

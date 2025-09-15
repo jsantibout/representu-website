@@ -1,7 +1,10 @@
+"use client";
+
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Share2 } from "lucide-react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
+import Image from "next/image";
 import strategyIcon from "@/assets/strategy-icon.png";
 import eventsIcon from "@/assets/event-icon.png";
 import contentIcon from "@/assets/content-icon.png";
@@ -77,11 +80,13 @@ const Services = () => {
             >
                <CardHeader className="space-y-4 ">
                  <div className="w-24 h-24 rounded-lg bg-gradient-primary p-3 group-hover:shadow-glow transition-all duration-300 mx-auto">
-                  <img
+                  <Image
                        src={service.icon}
                        alt={`${service.title} service icon`}
                        className="w-full h-full object-cover rounded"
-                   />
+                       width={96}
+                       height={96}
+                     />
                  </div>
                 <CardTitle className="text-xl font-bold text-center group-hover:text-primary transition-colors">
                   {service.title}
@@ -104,7 +109,7 @@ const Services = () => {
                    className="text-primary hover:text-primary-foreground hover:bg-primary group p-0 h-auto focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
                    asChild
                  >
-                   <Link to={service.path} onClick={() => window.scrollTo(0, 0)}>
+                   <Link href={service.path} onClick={() => window.scrollTo(0, 0)}>
                      Learn More
                      <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
                    </Link>
@@ -128,7 +133,7 @@ const Services = () => {
              className="bg-background text-primary hover:bg-background/90 shadow-lg hover:shadow-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
              asChild
            >
-             <Link to="/contact" onClick={() => window.scrollTo(0, 0)} className="flex items-center">
+             <Link href="/contact" onClick={() => window.scrollTo(0, 0)} className="flex items-center">
                Schedule a Consultation
                <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
              </Link>

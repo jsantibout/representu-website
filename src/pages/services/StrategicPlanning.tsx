@@ -1,21 +1,21 @@
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle} from "lucide-react";
+import Image from "next/image";
 import strategyPhoto from "@/assets/strategic-planning.jpg";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
 const StrategicPlanningPage = () => {
   return (
-    <div className="min-h-screen">
-      <Header />
-      <main className="pt-20">
+    <div>
+      <main>
         {/* Full-width hero image */}
         <div className="w-full h-[28rem] mb-8">
-          <img
+          <Image
             src={strategyPhoto}
             alt="Strategic planning meeting with team members discussing organizational goals and strategies"
             className="w-full h-full object-cover"
+            width={800}
+            height={448}
           />
         </div>
         
@@ -79,7 +79,7 @@ const StrategicPlanningPage = () => {
                   className="bg-background text-primary hover:bg-background/90 shadow-lg hover:shadow-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
                   asChild
                 >
-                  <Link to="/contact" onClick={() => window.scrollTo(0, 0)} className="flex items-center">
+                  <Link href="/contact" onClick={() => window.scrollTo(0, 0)} className="flex items-center">
                     Schedule a Consultation
                     <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
                   </Link>
@@ -89,7 +89,6 @@ const StrategicPlanningPage = () => {
           </div>
         </section>
       </main>
-      <Footer />
     </div>
   );
 };

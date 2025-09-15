@@ -1,9 +1,12 @@
+"use client";
+
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle} from "lucide-react";
+import Image from "next/image";
 import socialMediaPhoto from "@/assets/social-media.png";
-import { Link } from "react-router-dom"
+import Link from "next/link"
 
 const SocialMediaPage = () => {
   return (
@@ -12,10 +15,12 @@ const SocialMediaPage = () => {
       <div className="pt-20">
         {/* Full-width hero image */}
         <div className="w-full h-[28rem] mb-8">
-          <img
+          <Image
             src={socialMediaPhoto}
             alt="Social Media Management"
             className="w-full h-full object-cover"
+            width={800}
+            height={448}
           />
         </div>
         
@@ -80,7 +85,7 @@ const SocialMediaPage = () => {
                   className="bg-background text-primary hover:bg-background/90 shadow-lg hover:shadow-xl transition-all duration-300"
                   asChild
                 >
-                  <Link to="/contact" onClick={() => window.scrollTo(0, 0)} className="flex items-center">
+                  <Link href="/contact" onClick={() => window.scrollTo(0, 0)} className="flex items-center">
                     Schedule a Consultation
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>

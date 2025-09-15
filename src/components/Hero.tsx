@@ -1,8 +1,11 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play } from "lucide-react";
 import VideoPlayer from "@/components/VideoPlayer";
+import Image from "next/image";
 import logo from "@/assets/repU_LargeLogo.png";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
 
 const Hero = () => {
@@ -12,10 +15,12 @@ const Hero = () => {
         <header className="text-center pb-20">
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl font-extrabold leading-tight flex flex-col items-center justify-center">
             <span className="text-black pt-20 mt-20">Welcome to</span>
-            <img
+            <Image
               src={logo}
               alt="RepresentU - Empowering your cause and amplifying your voice"
               className="h-[2.5em] sm:h-[3em] md:h-[3.5em] lg:h-[3em] max-w-full"
+              width={300}
+              height={100}
             />
           </h1>
         </header>
@@ -44,7 +49,7 @@ const Hero = () => {
                 size="lg" 
                 className="bg-gradient-primary hover:shadow-glow transition-all duration-300 group focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
               >
-                <Link to="/contact" onClick={() => window.scrollTo(0, 0)}>
+                <Link href="/contact" onClick={() => window.scrollTo(0, 0)}>
                   Get Started Today
                   <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
                 </Link>
