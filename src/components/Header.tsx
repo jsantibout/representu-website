@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { useState, useRef, useEffect } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 
 const Header = () => {
@@ -53,10 +54,12 @@ const Header = () => {
               className="focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded transition-opacity hover:opacity-80"
               aria-label="Go to home page"
             >
-              <img 
+              <Image 
                 src="/RepresentULogo.png" 
                 alt="Represent U Logo" 
                 className="h-10 w-auto"
+                width={40}
+                height={40}
               />
             </Link>
           </div>

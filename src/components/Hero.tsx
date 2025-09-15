@@ -10,17 +10,15 @@ import Link from "next/link";
 
 const Hero = () => {
   return (
-    <section id="home" className="min-h-screen flex items-center bg-gradient-subtle" role="banner">
+    <section id="home" className="min-h-screen flex items-center bg-gradient-subtle pt-20" role="banner">
       <div className="container px-4">
         <header className="text-center pb-20">
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl font-extrabold leading-tight flex flex-col items-center justify-center">
             <span className="text-black pt-20 mt-20">Welcome to</span>
-            <Image
-              src={logo}
+            <img
+              src={logo.src}
               alt="RepresentU - Empowering your cause and amplifying your voice"
               className="h-[2.5em] sm:h-[3em] md:h-[3.5em] lg:h-[3em] max-w-full"
-              width={300}
-              height={100}
             />
           </h1>
         </header>

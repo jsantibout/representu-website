@@ -1,19 +1,9 @@
-"use client";
-
-import Header from "@/components/Header";
-import GrantServices from "@/pages/services/GrantServices";
-import Footer from "@/components/Footer";
-
-export const dynamic = 'force-dynamic';
+import GrantServices from "@/components/services/GrantServices";
 
 export default function GrantServicesPage() {
   return (
-    <div className="min-h-screen">
-      <Header />
-      <main id="main-content">
-        <GrantServices />
-      </main>
-      <Footer />
-    </div>
+    <main id="main-content">
+      <GrantServices />
+    </main>
   );
 }

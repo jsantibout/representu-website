@@ -4,8 +4,8 @@ import './globals.css'
 import { Toaster } from "@/components/ui/toaster"
 import { Toaster as Sonner } from "@/components/ui/sonner"
 import { TooltipProvider } from "@/components/ui/tooltip"
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query"
 import { Providers } from './providers'
+import ClientLayout from "@/components/ClientLayout"
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -40,7 +40,9 @@ export default function RootLayout({
             >
               Skip to main content
             </a>
-            {children}
+            <ClientLayout>
+              {children}
+            </ClientLayout>
           </TooltipProvider>
         </Providers>
       </body>

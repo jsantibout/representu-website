@@ -1,10 +1,16 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: [],
-    unoptimized: true
+    domains: ['www.youtube.com'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'www.youtube.com',
+        port: '',
+        pathname: '/embed/**',
+      },
+    ],
   },
-  trailingSlash: true
 }
 
 module.exports = nextConfig

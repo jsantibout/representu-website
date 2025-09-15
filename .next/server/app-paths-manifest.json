@@ -1,4 +1,6 @@
 {
   "/page": "app/page.js",
-  "/services/strategic-planning/page": "app/services/strategic-planning/page.js"
+  "/services/strategic-planning/page": "app/services/strategic-planning/page.js",
+  "/contact/page": "app/contact/page.js",
+  "/services/event-services/page": "app/services/event-services/page.js"
 }
