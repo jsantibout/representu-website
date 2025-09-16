@@ -11,13 +11,20 @@ const Footer = () => {
           {/* Logo & Description */}
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
-              <Image 
-                src={RepULogo} 
-                alt="Represent U Logo" 
-                className="h-12 w-12 rounded-full object-cover"
-                width={48}
-                height={48}
-              />
+              <Link 
+                href="/" 
+                onClick={() => window.scrollTo(0, 0)}
+                className="focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded transition-opacity hover:opacity-80"
+                aria-label="Go to home page"
+              >
+                <Image 
+                  src={RepULogo} 
+                  alt="Represent U Logo" 
+                  className="h-12 w-12 rounded-full object-cover"
+                  width={48}
+                  height={48}
+                />
+                </Link>
             </div>
             <p className="text-white/80 text-sm leading-relaxed">
               Empowering your cause and amplifying your voice through strategic marketing solutions.
@@ -101,6 +108,15 @@ const Footer = () => {
                     onClick={() => window.scrollTo(0, 0)}
                   >
                     Grant Consulting
+                  </Link>
+                </li>
+                <li>
+                  <Link 
+                    href="/services/website-design" 
+                    className="text-white/80 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-black rounded"
+                    onClick={() => window.scrollTo(0, 0)}
+                  >
+                    Website Design & Development
                   </Link>
                 </li>
               </ul>

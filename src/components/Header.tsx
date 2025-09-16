@@ -154,6 +154,14 @@ const Header = () => {
                     >
                       Grant Consulting
                     </Link>
+                    <Link 
+                      href="/services/website-design" 
+                      onClick={() => window.scrollTo(0, 0)} 
+                      className="block px-4 py-2 text-sm text-foreground hover:bg-accent hover:text-accent-foreground transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-inset"
+                      role="menuitem"
+                    >
+                      Website Design & Development
+                    </Link>
                   </div>
                 </div>
               )}
@@ -247,6 +255,13 @@ const Header = () => {
                       role="menuitem"
                     >
                       Grant Consulting
+                    </Link>
+                    <Link href="/services/website-design" 
+                      className="text-muted-foreground hover:text-primary transition-colors block py-1 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
+                      onClick={() => { window.scrollTo(0, 0); setIsMenuOpen(false); }} 
+                      role="menuitem"
+                    >
+                      Website Design & Development
                     </Link>
                   </div>
                 )}

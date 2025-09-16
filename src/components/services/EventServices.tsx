@@ -66,17 +66,19 @@ const EventServices = () => {
               </div>
             </div>
 
-            <div className="text-center">
+            <div className="text-center pb-20">
               <h2 className="text-3xl lg:text-4xl pt-4 font-bold">
                 <span className="text-foreground">Testimonials</span>
               </h2>
               <div className="mt-6 pb-10 flex justify-center">
                 <VideoPlayer videoSrc={"https://www.youtube.com/embed/Y75M3K6hdno?autoplay=1"} />
               </div>
-              <div className="pb-20">
+              <div>
                 <VideoPlayer videoSrc={"https://www.youtube.com/embed/FMMxxdx-uZk"} />
               </div>
-              
+              <p className="text-xs italic text-muted-foreground text-center mb-7">
+              Videos from SebazVideo Productions
+              </p>
             </div>
 
             <div className="text-center bg-gradient-primary rounded-2xl p-12 text-primary-foreground">

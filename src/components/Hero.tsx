@@ -52,22 +52,6 @@ const Hero = () => {
                 </Link>
               </Button>
             </div>
-
-            {/* Stats */}
-            {/* <div className="grid grid-cols-3 gap-8 pt-8 border-t border-border">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-primary">200+</div>
-                <div className="text-sm text-muted-foreground">Organizations Served</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-primary">95%</div>
-                <div className="text-sm text-muted-foreground">Success Rate</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-primary">$2M+</div>
-                <div className="text-sm text-muted-foreground">Grants Secured</div>
-              </div>
-            </div> */}
           </div>
 
           {/* Promo Video */}
@@ -80,6 +64,9 @@ const Hero = () => {
             <div className="relative z-10 rounded-2x1 overflow-hidden shadow-x1">
               <VideoPlayer videoSrc={"https://www.youtube.com/embed/T6fJ3Q6duuc?autoplay=1&mute=1"} />
             </div>
+            <p className="text-xs italic text-muted-foreground text-center mt-2">
+              Video from Fresh Scoop Media
+            </p>
           </div>
         </div>
       </div>

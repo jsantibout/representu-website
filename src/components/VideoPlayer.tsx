@@ -34,6 +34,7 @@ export default function VideoPlayer({videoSrc}: VideoPlayerProps) {
                 allowFullScreen
                 loading="lazy"
                 aria-describedby="video-description"
+                suppressHydrationWarning
             ></iframe>
             <div id="video-description" className="sr-only">
                 This promotional video showcases RepresentU's mission to empower organizations through strategic planning, 

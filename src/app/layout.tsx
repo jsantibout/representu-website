@@ -45,6 +45,7 @@ export default function RootLayout({
             </ClientLayout>
           </TooltipProvider>
         </Providers>
+        <script src="https://link.msgsndr.com/js/form_embed.js" async></script>
       </body>
     </html>
   )
