@@ -59,7 +59,7 @@ const WebsiteDesign = () => {
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
                   We create websites that not only look great but also perform optimally across all 
-                  devices, load quickly, and are optimized for search engines to maximize your online visibility.
+                  devices and load quickly to maximize your online visibility.
                 </p>
               </div>
             </div>

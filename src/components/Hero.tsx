@@ -3,7 +3,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play } from "lucide-react";
 import VideoPlayer from "@/components/VideoPlayer";
-import Image from "next/image";
 import logo from "@/assets/repU_LargeLogo.png";
 import Link from "next/link";
 
