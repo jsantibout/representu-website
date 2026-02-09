@@ -9,11 +9,9 @@ export const dynamic = 'force-dynamic';
 export default function ServicesPage() {
   return (
     <div className="min-h-screen">
-      <Header />
       <main id="main-content">
         <Services />
       </main>
-      <Footer />
     </div>
   );
 }
