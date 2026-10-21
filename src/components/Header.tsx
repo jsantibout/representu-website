@@ -166,6 +166,9 @@ const Header = () => {
                 </div>
               )}
             </div>
+            <Link href="/biz-kidz-expo" onClick={() => window.scrollTo(0, 0)} className="text-foreground hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded">
+              Biz Kidz Expo
+            </Link>
             <Link href="/contact" onClick={() => window.scrollTo(0, 0)} className="text-foreground hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded">
               Contact
             </Link>
@@ -266,6 +269,9 @@ const Header = () => {
                   </div>
                 )}
               </div>
+              <Link href="/biz-kidz-expo" className="text-foreground hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded" onClick={() => { window.scrollTo(0, 0); setIsMenuOpen(false); }}>
+                Biz Kidz Expo
+              </Link>
               <Link href="/contact" 
                 className="text-foreground hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
                 onClick={() => { window.scrollTo(0, 0); setIsMenuOpen(false); }} 
